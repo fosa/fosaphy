@@ -1,0 +1,7 @@
+*.aux
+*.log
+*.toc
+*.out
+*.tmp
+*.bak
+fosaphy_main.pdf

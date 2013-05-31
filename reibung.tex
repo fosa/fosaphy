@@ -16,6 +16,32 @@
 %----------------------------------------
 
 \chapter{Reibung}
-\input{reib_reibung}
-\input{reib_koeff}
-\input{reib_schief}
+\section{Reibung}
+Haftreibung: 
+\[ \boxed{F_{HR} \leq F_N \cdot \mu_{HR}} \]
+Wird $F_{HR} > F_N \cdot \mu_{HR}$, so beginnt der Körper zu rutschen. 
+Es gilt dann die Gleitreibung: 
+\[ \boxed{F_{GR} = F_N \cdot \mu_{GR}} \]
+Achtung! $F_N$ wirkt senkrecht zur Oberfläche! 
+
+\section{Reibungskoeffizient}
+\begin{footnotesize}
+\begin{longtable}{llll}
+  \rowcolor{white} \textbf{Material 1} & \textbf{Material 2} 
+  & \textbf{Haftreibung $\mu_{HR}$} & \textbf{Gleitreibung $\mu_{GR}$}\\
+  \rowcolor{lgray}  Stahl     & Stahl             & 0.74 & 0.57\\
+  \rowcolor{white}  Aluminium & Stahl             & 0.61 & 0.47\\
+  \rowcolor{lgray}  Kupfer    & Stahl             & 0.53 & 0.36\\
+  \rowcolor{white}  Messing   & Stahl             & 0.51 & 0.44\\
+  \rowcolor{lgray}  Zink      & Grauguss          & 0.85 & 0.21\\
+  \rowcolor{white}  Kupfer    & Grauguss          & 1.05 & 0.29\\
+  \rowcolor{lgray}  Glas      & Glas              & 0.94 & 0.40\\
+  \rowcolor{white}  Kupfer    & Glas              & 0.68 & 0.53\\
+  \rowcolor{lgray}  Teflon    & Teflon            & 0.04 & 0.04\\
+  \rowcolor{white}  Teflon    & Stahl             & 0.04 & 0.04\\
+  \rowcolor{lgray}  Gummi     & Beton (trocken)   & 1.0  & 0.80\\
+  \rowcolor{white}  Gummi     & Beton (nass)      & 0.30 & 0.25
+\end{longtable}
+\end{footnotesize}
+
+\section{Schiefe Ebene}

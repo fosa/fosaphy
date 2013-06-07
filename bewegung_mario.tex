@@ -1,0 +1,169 @@
+% coding:utf-8
+
+%----------------------------------------
+%FOSAPHY, a LaTeX-Code for a summary of basic physics
+%Copyright (C) 2013, Mario Felder
+
+%This program is free software; you can redistribute it and/or
+%modify it under the terms of the GNU General Public License
+%as published by the Free Software Foundation; either version 2
+%of the License, or (at your option) any later version.
+
+%This program is distributed in the hope that it will be useful,
+%but WITHOUT ANY WARRANTY; without even the implied warranty of
+%MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+%GNU General Public License for more details.
+%----------------------------------------
+
+\chapter{Bewegung}
+
+\section{Gerade Bewegung}
+
+\[v=\lim\limits_{\Delta t \rightarrow 0}{\frac{\Delta x}{\Delta t}}=\frac{\mathrm{d}x}{\mathrm{d}t}=\dot{x}\]
+\[a=\lim\limits_{\Delta t \rightarrow 0}{\frac{\Delta v}{\Delta t}}=\frac{\mathrm{d}v}{\mathrm{d}t}=\dot{v}=\ddot{x}\]
+\[\Delta x=\lim\limits_{\Delta t_i \rightarrow 0}{\sum^{n}_{i=1}v_i\cdot\Delta t}=\int_{t_A}^{t_B}v\mathrm{d}t\]
+
+\subsection{Spezialfall: konstante Beschleunigung a}
+
+\[a(t)=a=\mathrm{konstant}\]
+\[v(t)=v_0+a\cdot t\]
+\[x(t)=x_0+v_0\cdot t+\frac{1}{2}a^{2}\]
+\[\Delta x=x-x_0=v_0\cdot t+\frac{1}{2}\cdot a\cdot t^2\]
+\[v^2=v_{0}^{2}+2a\Delta x\]
+\[a=\frac{v(t)^2-v_0^2}{2\cdot\Delta s}\]
+
+\section{Bewegung im Raum}
+Postition, Geschwindigkeit und Beschleunigung sind Vektoren.\\
+
+\begin{footnotesize}
+\boxed{
+\begin{tabular}{l}
+		$\vec{\Delta r}=\vec{r_2}-\vec{r_1}=(x_2-x_1,y_2-y_1,z_2-z_1)$\\ \\
+		$v\rightarrow\vec{v}=\lim\limits_{\Delta t \rightarrow 0}{\frac{\vec{\Delta r}}{\Delta t}}
+			=\frac{\mathrm{d}\vec{r}}{\mathrm{d}t}
+			=(\frac{\mathrm{d}x}{\mathrm{d}t},\frac{\mathrm{d}y}{\mathrm{d}t},\frac{\mathrm{d}z}{\mathrm{d}t})$\\ \\
+		$a\rightarrow\vec{a}=\lim\limits_{\Delta t \rightarrow 0}{\frac{\vec{\Delta v}}{\Delta t}}
+			=\frac{\vec{\mathrm{d}v}}{\mathrm{d}t}
+			=\frac{\mathrm{d^2}\vec{r}}{\mathrm{d}t^2}$
+\end{tabular}
+}
+\end{footnotesize}
+\newline
+
+
+\subsection{Bahnkurve}
+
+Die Geschwindigkeit liegt immer \textbf{tangential} an der Bahnkurve. \newline
+\newline
+Die Beschleunigung zeigt immer nach \textbf{innen}.
+
+\subsection{Kreisbewegung}
+Bei einer \textbf{gleichförmigen} Kreisbewegung ($v=\mathrm{konst.}$) gilt:
+\[
+	a_{ZP}=a_{radial}=\frac{v^2}{r}=\omega^2 \cdot r
+\]
+\newline
+\newline
+Bei einer \textbf{ungleichförmigen} Kreisbewegung gilt:
+\[
+	a_{radial}=\frac{v^2}{r}=\omega^2 \cdot r \\
+	a_{tangential}=\frac{\mathrm{d}\left|v\right|}{\mathrm{d}t}
+\]
+
+\section{Schiefer Wurf}
+
+x- und y-Bewegung sind unabhängig:
+\newline
+\begin{footnotesize}
+\boxed{
+\begin{tabular}{ll}
+		\textbf{horizontal:}						&	\textbf{vertikal:}\\
+		$a_x=0$													&	$a_y=-g$ \\
+		$v_x=v_0*\cos\alpha_0$					& $v_y=v_0*\sin\alpha_0 - g \cdot t$ \\
+		$x=(v_0*\cos\alpha_0) \cdot t$	& $y=(v_0*\sin\alpha_0) \cdot t - \frac{1}{2}g \cdot t^2$ \\
+																		&	$v_y^2=v_{0y}^2-2gy$
+\end{tabular}
+}
+\end{footnotesize}
+\newline
+\newline
+Wurfdauer:
+\[
+	\boxed{t_R=\frac{2 \cdot v_{0y}}{g}=\frac{2v_0 \cdot\sin\theta}{g}}
+\]
+\newline
+Wurfweite:
+\[
+	\boxed{R=x(t_r)=\frac{v_0^2\sin2\theta}{g}}
+\]
+\newline
+
+\subsection{$x(t),y(t)\leftrightarrow y(x)$}
+\[
+	\boxed{
+		y(x)=\tan\theta_0 \cdot x-\frac{g}{2(v_0\cos\theta_0)^2}\cdot x^2
+	}
+\]
+\newline
+\begin{figure}[htbp]
+\centering
+\begin{gnuplot}[scale=0.62]
+	set terminal epslatex color
+	set grid
+  set xrange [0:100]
+	set yrange [-80:35]
+	set xtics 20
+	set ytics 20
+	set xlabel '$x$ [m]'
+	set ylabel '$y$ [m]'
+	set xzeroaxis
+	
+  # define the function
+  f(x,theta)=tan(pi/180*theta)*x-9.81/(2*(25*cos(pi/180*theta))**2)*x**2
+
+  plot f(x,70) ti "$\\theta=70$",f(x,53.1) ti "$\\theta=53.1$",f(x,45) ti "$\\theta=45$",f(x,36.9) ti "$\\theta=36.9$",f(x,20) ti "$\\theta=20$"
+\end{gnuplot}
+\end{figure}
+
+\subsection{schräge Zerlegung}
+Die Komponentenzerlegung eines Vektors ist beliebig. Manchmal ist eine schräge Zerlegung besser als eine Senkrechte,
+beispielsweise in die $\vec{v_0}$ und $\vec{g}$ Richtung:
+\newline
+\[
+	s=v_0 \cdot t \\
+	y=\frac{1}{2}g \cdot t^2
+\]
+\begin{figure}[htbp]
+\centering
+\begin{gnuplot}[scale=0.75]
+	set terminal epslatex color
+	set size ratio -1
+	set grid
+  set xrange [0:55]
+	set yrange [-5:15]
+	set xtics 5
+	set ytics 5
+	set format ""
+	unset key
+
+  # define the function
+  f(x,theta)=tan(pi/180*theta)*x-9.81/(2*(25*cos(pi/180*theta))**2)*x**2
+
+	set style line 2 lc rgb 'black' pt 7   # circle
+	
+	set label 1 "$s=v_0 \\cdot t$" at 25,10 rotate by 20
+	set arrow from 0,0 to 35,12.739
+	
+	set label 2 "$\\vec{v_0}$" at 10,5
+	set arrow from 0,0 to 15,tan(pi/180*20)*15 linecolor rgb 'green' linewidth 3
+	
+	set label 3 "$y=\\frac{1}{2}g \\cdot t^2$" at 37,11 rotate right
+	set arrow from 35,12.739 to 35,f(35,20)
+	
+	set label 4 "$\\vec{v_0}$" at 45,7
+	set arrow from 35,f(35,20) to 50,tan(pi/180*20)*15+f(35,20) linecolor rgb 'green' linewidth 3
+	
+	set object circle at 35,f(35,20) size 0.2
+  plot f(x,20) ti ""
+	\end{gnuplot}
+\end{figure}

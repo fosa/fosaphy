@@ -5,4 +5,4 @@ Formelsammlung für Physik
 
 Achtung! 
 --------
-Das Repository ist umgezogenn nach http://github.com/fosa/fosaphy
+Das Repository ist umgezogen nach http://github.com/fosa/fosaphy

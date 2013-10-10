@@ -6,3 +6,5 @@
 *.bak
 fosaphy_main.pdf
 *.swp
+*.gnuplot
+

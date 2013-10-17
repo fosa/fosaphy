@@ -117,7 +117,46 @@ Schwingungsenergie:
 \[ \boxed{\frac{d E(t)}{dt} 
 = \frac{m}{2} \cdot 2 \cdot \dot{x}^2(t) \cdot \ddot{x}^2(t) 
 + \frac{k}{2} \cdot 2 \cdot x^2(t) \cdot \dot{x}^2(t) 
-= \underbrace{(m \ddot{x}(t) + k x(t))}_{-b \dot{x}(t)} \cdot \dot{x}(t) 
-= -b \dot{x}^2 - b v^2(t) \leq 0} \]
+= \underbrace{(m \ddot{x}(t) + k x(t))}_{-b \dot{x}(t)} \cdot \dot{x}(t)} \]
+\[ \boxed{\frac{d E(t)}{dt} = -b \dot{x}^2 - b v^2(t) \leq 0} \]
 \[ \boxed{A(t) = A \cdot e^{-\frac{t}{\tau}}} \]
 \[ \boxed{E(t) = E_0 \cdot e^{-\frac{t}{\frac{\tau}{2}}}} \]
+Güte: 
+\[ \boxed{Q = \frac{\pi}{\beta \cdot T_d} = \pi \cdot \frac{\tau}{T_d} 
+= \frac{\omega_d \cdot \tau}{2}} \]
+
+\section{Erzwungene Schwingung}
+\[ \boxed{x(t) = A(\Omega) \cdot \cos(\Omega t - \varphi(\Omega))} \]
+\[ \boxed{A(\Omega) = \frac{F_0}{m \cdot 
+\sqrt{(\omega^2 - \Omega^2)^2 + (2 \cdot \Omega \cdot \beta)^2}} 
+\approx \frac{H}{\sqrt{\left(1 - \left(\frac{\Omega}{\omega}\right)^2\right)^2 
++ \left(\frac{\Omega}{Q \cdot \omega}\right)^2}}} \]  
+\[ \boxed{\varphi(\Omega) = \arctan\left(\frac{2 \cdot \Omega \cdot \beta}
+{{\omega_0}^2 - \Omega^2}\right) 
+= \arctan{\left(\frac{\frac{b}{\sqrt{k \cdot m}} 
+\left(\frac{\Omega}{\omega}\right)}
+{1 - \left(\frac{\Omega}{\omega}\right)^2}\right)}} \]
+\[ \boxed{H = \frac{F}{k}} \]
+\[ \boxed{\omega = \sqrt{\frac{k}{m}}} \]
+\[ \boxed{\beta = \frac{b}{2 m} = \frac{1}{\tau}} \]
+\[ \boxed{Q = \frac{\omega_d}{2\beta} = \omega_d \frac{m}{b} 
+= \pi \frac{\tau}{T}} \]
+schwache Dämpfung: 
+\[ \boxed{b << b_{krit} = \sqrt{4 k \cdot m} \quad Q >> 1} \]
+
+\subsection{Resonanzfrequenz}
+\[ \boxed{\frac{d A(\Omega)}{d\Omega} = 0} \]
+\[ \boxed{\Omega_R = \sqrt{\omega^2 - 2\beta^2} \neq \omega_d 
+= \sqrt{\omega^2 - \beta^2} \neq \omega} \]
+\[ \boxed{A(\Omega_R) = \frac{\omega^2 H}{2 \beta \sqrt{\omega^2 - \beta^2}} 
+= \frac{k H}{m \sqrt{(\omega^2 - {\Omega_R}^2)^2 + (2\beta\Omega_R)^2}} 
+\approx \frac{Q H}{\sqrt{1 - \frac{1}{2 Q^2}}} \approx Q \cdot H} \]
+\[ \boxed{\varphi_R = \varphi(\Omega_R) 
+= \arctan\left(\frac{2 \beta \omega_R}{\omega^2 - {\Omega_R}^2}\right) 
+\approx \arctan\left(\sqrt{4 Q^2 - 2}\right) \approx \frac{\pi}{2}} \]
+
+% ohne Dämpfung ($b = 0$): 
+% \[ \boxed{A(\Omega) = \frac{F_0}{m \cdot \sqrt{(\omega^2 - \Omega^2)^2}} 
+% = \frac{\omega^2 \cdot H}{|\omega^2 - \Omega^2|}} \]  
+% \[ \boxed{\varphi(\Omega) = \arctan\left(\frac{b \cdot \Omega}
+% {m \cdot (\omega^2 - \Omega^2)}\right)} \]

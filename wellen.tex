@@ -116,21 +116,24 @@ Achtung Vorzeichen!
 
 \section{Stehende Welle}
 \[ \boxed{f_{ges}(x,t) = 2 \cdot A \cdot \cos(k x) \cdot \cos(\omega t)} \]
+$A$: Amplitude der eingehenden Sinusfunktion \\
+
+\subsection{Harmonische}
 \begin{tabular}{lllll}
-$n$ & $\lambda$       & \#Bäuche & \#Knoten & Mitte \\
-$1$ & $\frac{2 L}{1}$ & $1$      & $0$      & Bauch \\
-$2$ & $\frac{2 L}{2}$ & $2$      & $1$      & Knoten \\
-$3$ & $\frac{2 L}{3}$ & $3$      & $2$      & Bauch \\
-$4$ & $\frac{2 L}{4}$ & $4$      & $3$      & Knoten \\
-$5$ & $\frac{2 L}{5}$ & $5$      & $4$      & Bauch \\
+\rowcolor{white} $n$ & $\lambda$       & \#Bäuche & \#Knoten & Mitte \\
+\rowcolor{lgray} $1$ & $\frac{2 L}{1}$ & $1$      & $0$      & Bauch \\
+\rowcolor{white} $2$ & $\frac{2 L}{2}$ & $2$      & $1$      & Knoten \\
+\rowcolor{lgray} $3$ & $\frac{2 L}{3}$ & $3$      & $2$      & Bauch \\
+\rowcolor{white} $4$ & $\frac{2 L}{4}$ & $4$      & $3$      & Knoten \\
+\rowcolor{lgray} $5$ & $\frac{2 L}{5}$ & $5$      & $4$      & Bauch \\
 \end{tabular}
-\subsection{n-te Harmonische}
+% \subsection{n-te Harmonische}
 \[ \lambda_n = \frac{2 L}{n} \qquad f_n = \frac{v}{\lambda_n} 
 = n \frac{v}{2 L} = n \cdot f_1 \]
 \#Bäuche: $n$ \\
 \#Knoten: $n - 1$ \\
 Mitte: \\
-$n$ gerade Knoten
-$n$ ungerade Bauch
+$n$ gerade: Knoten \\
+$n$ ungerade: Bauch
 \[ f_n(x, t) 
 = A \sin\left(\frac{2 \pi}{\lambda_n} x\right) \cdot \sin(2 \pi f_u t) \]

@@ -22,16 +22,14 @@ Feder gestreckt, so zeigt die Kraft zur Feder hin und wird die Feder
 gestaucht, so zeigt die Kraft von der Feder weg.
 
 \section{Energie}\label{sec:feder-energie}
-
+Die Energie einer Feder ist definiert als die Federkonstante $k$ multipliziert
+mit dem Integral der Dehnung (Weg $\Delta s$ bzw. s).
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.9]{feder-energie.pdf}
 	\caption{Energie einer Feder als Fläche dargestellt.}
 	\label{fig:feder-energie}
 \end{figure}
-
-Die Energie einer Feder ist definiert als die Federkonstante $k$ multipliziert
-mit dem Integral der Dehnung (Weg $\Delta s$ bzw. s).
 
 \[ \boxed{E_{Feder} = k \cdot \int_{s_a}^{s_b} s \cdot ds = \frac{k \cdot s^2}{2}} \] \\
 
@@ -44,14 +42,23 @@ werden im speziellen zwei Fälle unterschieden:
 	\item Serielle Anordnung von Federn
 \end{itemize}
 
-\subsection{Parallele Anordnung}
-
 \begin{figure}[h!]
 	\centering
-	\includegraphics[scale=0.75]{feder-parallel.pdf}
-	\caption{Parallele Federanordnung.}
-	\label{fig:feder-parallel}
+	\begin{subfigure}[c]{0.45\textwidth}
+		\includegraphics[scale=0.75]{feder-parallel.pdf}
+		\caption{Parallele Federanordnung.}
+		\label{fig:feder-parallel}
+	\end{subfigure}
+	\begin{subfigure}[c]{0.45\textwidth}
+		\includegraphics[scale=0.75]{feder-seriell.pdf}
+		\caption{Serielle Federanordnung}
+		\label{fig:feder-seriell}
+	\end{subfigure}
+	\caption{Federanordnungen in Vergleich}
+	\label{fig:federanordnungen}
 \end{figure}
+
+\subsection{Parallele Anordnung}
 
 \noindent
 Werden Federn parallel angeordnet, so können die Federkosntanten summiert 
@@ -61,13 +68,6 @@ werden.
 
 \subsection{Serielle Anordnung}
 
-\begin{figure}[h!]
-	\centering
-	\includegraphics[scale=0.75]{feder-seriell.pdf}
-	\caption{Serielle Federanordnung}
-	\label{fig:feder-seriell}
-\end{figure}
-
 \noindent
 Werden Federn seriell angeordnet, so können die Federkonstanten reziprok 
 summiert werden.
@@ -75,11 +75,10 @@ summiert werden.
 \[ \boxed{\frac{1}{k_{seriell}} = \sum_{i=1}^n \frac{1}{k_i} = 
 	\frac{1}{k_1} + \frac{1}{k_2} + \dots + \frac{1}{k_n}} \]
 
-\noindent
-In einer seriellen Anordnung mit $n$ Federn gilt, dass die Gesamtenergie 
-$E_{Total}$ zu gleichen Teilen in den einzelnen Federn aufgeteilt ist.
-
-\[ \boxed{E_{Feder} = \frac{E_{Total}}{n}} \]
+\[ \boxed{\frac{E_1}{E_{Total}} = \frac{k_1 \cdot {k_2}^2}{k_1 + k_2}} \]  
+\[ \boxed{\frac{E_2}{E_{Total}} = \frac{{k_1}^2 \cdot k_2}{k_1 + k_2}} \]  
+\[ \boxed{\frac{E_1}{E_2} = \frac{k_2}{k_1}} \]
+\[ \boxed{\frac{E_2}{E_1} = \frac{k_1}{k_2}} \]
 
 \section{Federkonstante}
 Die Federkonstante ist eine material- und geometrieabhängige Grösse welche

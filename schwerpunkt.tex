@@ -1,0 +1,94 @@
+\chapter{Schwerpunkt}
+
+\section{Definition}
+Der Schwerpunkt eines Systems bezeichnet eine vektorielle Grösse,
+welche das Zentrum der Masse auszeichnet. Dieser wird bestimmt
+durch den Quotienten aus der Summe aller Massen zu einem Abstand
+und der Gesamtmasse.
+\[ \boxed{ cm =  
+	\begin{pmatrix} 
+		x_{cm} \\ 
+		\\
+		y_{cm} \\
+		\\
+		z_{cm}
+	\end{pmatrix} 
+	=
+	\begin{pmatrix}
+		\frac{m_1 x_1 + m_2 x_2 + \dots + m_n x_n}
+			{m_1 + m_2 + \dots + m_n} \\
+		\\
+		\frac{m_1 y_1 + m_2 y_2 + \dots + m_n y_n}
+			{m_1 + m_2 + \dots + m_n} \\
+		\\
+		\frac{m_1 z_1 + m_2 z_2 + \dots + m_n z_n}
+			{m_1 + m_2 + \dots + m_n}
+	\end{pmatrix} }
+\]
+Der Ursprung des Koordinatesnsystems spielt bei der Ermittlung des
+Schwerpunktes keine Rolle, denn es ist ein geometrischer Ort des 
+betrachteten Objektes. Eine Verscheibung des Koordinatesnsystems
+verändert diesen nicht.
+
+\section{Bewegung des Schwerpunktes}
+
+\subsection{Geschwindigkeit}
+Wendet man das Newton'sche Bewegungsgesetz auf ein System von
+Massen an, so gilt die Bewegung lediglich für den Schwerpunkt,
+d.h. alle anderen Massenpnkte welche nicht den Schwerpunkt abbilden,
+habe eine andere Bewegung bzw. können eine andere Bewegung haben.
+\[ \boxed{ \vec{v}_{cm} = 
+	\begin{pmatrix} 
+		\frac{m_1 \vec{v_x}_1 
+			+ m_2 \vec{v_x}_2 
+			+ \dots m_n \vec{v_x}_n}
+			{m_1 + m_2 + \dots + m_n} \\
+		\\
+		\frac{m_1 \vec{v_y}_1 
+			+ m_2 \vec{v_y}_2 
+			+ \dots m_n \vec{v_y}_n}
+			{m_1 + m_2 + \dots + m_n} \\
+		\\
+		\frac{m_1 \vec{v_z}_1 
+			+ m_2 \vec{v_z}_2 
+			+ \dots m_n \vec{v_z}_n}
+			{m_1 + m_2 + \dots + m_n}
+	\end{pmatrix} }
+\]
+Um ein praktisches Beispiel zu geben kann man sich einen Ball vorstellen.
+Der Ball (Schwerpunkt) bewegt sich mit $\vec{v} = m \cdot \vec{a}$.
+Die einzelnen Massenpunkte (z.B. Ventil des Balls) muss dieser Bewegung
+des Schwerpunktes nicht gleich sein, denn es kann um den Ball herum
+rotieren, d.h. eine andere Geschwidigkeit haben und auf einer anderen
+Bahn durch den Raum fliegen.
+
+\subsection{Impuls}
+Betrachtet man ein System aus Massen, d.h. ein Objekt aus 
+Massenpunkten\footnote{Ein Objekt aus Massepunkten ist alles ausser 
+einer rein theoretischen Punktmasse ohne Volumen, d.h. ein reales Objekt
+wie man es aus dem Alltag kennt.}, so kann
+auf dieses System mit Hilfe des Schwerpunktes ein Gesamtimpuls
+formuliert werden.
+\[ \boxed{
+	\left( \sum_{i=1}^n m_i \right) \cdot \vec{v}_{cm} 
+		= m_1 \vec{v}_1 + m_2 \vec{v}_2 + \dots m_n \vec{v}_n
+		=\vec{p} }
+\]
+
+\subsection{Beschleunigung}
+Ausgehend von der Geschwindigkeit kann die Beschleunigung des 
+Massensystems bestimmt werden. Dies erreicht man durch die 
+Ableitung des Gesamtimpulses nach der Zeit $dt$.
+\[ \boxed{
+	\left( \sum_{i=1}^n m_i \right) \cdot \vec{a}_{cm} 
+		= m_1 \vec{a}_1 + \dots m_n \vec{a}_n
+		= \frac{d \vec{P}}{dt} 
+		= \vec{F}_{Res}
+		= \sum_{i=1}^n \vec{F}_{extern} }
+\]
+Dies beschreibt das Newton'sche Gesetzt welches besagt, dass die 
+Summe der anliegenden (externen) Kräfte das Produkt aus Masse und
+Beschleunigung bildet. Diese vereinfachte Formulierung bezieht sich
+wiederum auf den Schwerpunkt und deren Bewegung.
+
+

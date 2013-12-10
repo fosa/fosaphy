@@ -1,6 +1,6 @@
 \chapter{Kreisbewegung}
 Bei einer Kreisbewegung verläuft die Bahnkurve kreisförmig,
-d.h. die bewegte Masse hat eine Zusammengesetzte Beschleunigung.
+d.h. die bewegte Masse hat eine zusammengesetzte Beschleunigung.
 Diese setzt sich aus einem radialen und tangentialen Anteil 
 zusammen. Da eine beschleunigte Masse eine Kraft ausübt, wird 
 bei einer Kreisbewegung auch von Radial- bzw. Zentripetalkraft
@@ -22,21 +22,24 @@ konstant und hat einen konstanten Abstand (Radius) zum Mittelpunkt.
 Die radial wirkende Kraft welche auch als Zentripetalkraft 
 bezeichnet wird, kann auf verschiedene Weise berechnet werden.
 \[ \boxed{\vec{F}_{rad} = \vec{F}_{ZP} 
-	= m \cdot \vec{a}_{radial}
+	= m \cdot \vec{a}_{rad}
 	= m \cdot \frac{\vec{v}^2}{r} 
 	= m \cdot \omega^2 \cdot r 
 	= m \cdot \frac{4 \cdot \pi^2 \cdot r}{T^2} } \]
 Die Beziehungen zwischen den Bahngrössen lassen sich dabei 
-mit vier Gleichungen beschreiben:
+grundsätzlich mit vier Gleichungen beschreiben:
 \[ \boxed{ \begin{array}{l r l}
 	\text{Bogenlänge $s$} & 
 		s & = r \cdot \theta \\
+	& & \\
 	\text{Geschwindigkeit tangential $\vec{v}$} &
 		\vec{v} & = r \cdot \omega
 		= r \cdot \frac{d\omega}{dt} \\
+	& & \\
 	\text{Beschleunigung tangential $\vec{a}_{tan}$} &
 		\vec{a}_{tan} & = r \cdot \alpha 
 		= r \cdot \frac{d^2\theta}{dt} \\
+	& & \\
 	\text{Beschleunigung radial $\vec{a}_{rad}$} &
 		\vec{a}_{rad} & = \frac{v^2}{r} = \omega^2 \cdot r
 \end{array} }\]
@@ -48,8 +51,10 @@ eines Rotierenden Körpers zu beachten.
 	\vec{a}_{rad} & = \frac{\vec{v}^2}{r} 
 		= \omega^2 \cdot r 
 		= \dot{\omega}^2 \cdot r \\
+	& \\
 	\vec{a}_{tan} & = \alpha \cdot r
 		= \ddot{\omega} \cdot r \\
+	& \\
 	\vec{a}_{res} & = \sqrt{\vec{a}_{rad}^2 + \vec{a}_{tan}^2} 
 \end{array} }\]
 
@@ -69,13 +74,12 @@ Beschleunigung wie in der Translation.
 		\theta
 		\xrightarrow{\frac{d}{dt}} \omega 
 		\xrightarrow{\frac{d}{dt}} \alpha \\
+	& \\
 	\text{Translation} \qquad &
 		s
 		\xrightarrow{\frac{d}{dt}} \vec{v} 
 		\xrightarrow{\frac{d}{dt}} \vec{a}
 \end{array} }\]
-
-
 
 \noindent
 Die einzelnen Grössen $\omega$ und $\alpha$ können mit den folgenden 
@@ -85,9 +89,54 @@ Formeln beschrieben werden.
 		\omega & = \omega_0 + \alpha \cdot t 
 			= \frac{d\theta}{dt} 
 			= \dot{\theta} \\
+	& & \\
 	\text{Winkelbeschleunigung} &
 		\alpha & = \frac{d^2\theta}{dt^2} = \ddot{\theta}
 \end{array} }\]
+
+\section{Trägheitsmoment}
+Das Trägheitsmoment beschreibt die Massenverteilung eines Körpers
+bezogen auf eine Drehachse. Dieses muss bei jeder Form von Rotation
+berücksichtigt werden und ist grundsätzlich unabhängig von der 
+Bewegung, nicht aber von der Drehachse.
+
+Das Trägheitsmoment wird beschrieben durch die Summe der 
+Produkte aus den Massepunkten und deren Abstand im Quadrat zur 
+Drehachse des Körpers.
+\[ \boxed{
+	I = m_1 \cdot r_1^2
+		+ m_2 \cdot r_2^2 
+		+ \dots 
+		+ m_n \cdot r_n^2
+		= \sum m_i \cdot r_i^2
+		= \int r^2 \cdot dm
+} \]
+
+\noindent
+Trägheitsmomente verschiedener Körper können zu einem Trägheitsmoment
+summiert werden, wenn diese auf der gleichen Drehachse rotieren.
+\[ \boxed{
+	I_{Total} = I_1 + I_2 + \dots + I_n
+} \]
+
+\section{Rotationsenergie}
+Die Rotationsenergie ist im Grunde genommen die kinetische Enerige
+eines starren Körpers der um eine feste Achse rotiert.
+\[ \boxed{\begin{array}{r l}
+	E_{kin} & = \frac{1}{2} \cdot m \cdot \vec{v}^2 \\
+	& \\
+	\Rightarrow E_{rot} & = \frac{1}{2} \cdot m_1 \cdot \vec{v}_1^2
+			+ \frac{1}{2} \cdot m_2 \cdot \vec{v}_2^2
+			+ \dots 
+			+ \frac{1}{2} \cdot m_n \cdot \vec{v}_n^2 \\
+	& \\
+		& = \frac{1}{2} \cdot \left(m_1 \cdot r_1^2
+			+ m_2 \cdot r_2^2 
+			+ \dots
+			+ m_n \cdot r_n^2\right) \cdot \omega^2 \\
+	& \\
+		& = \frac{1}{2} \cdot I \cdot \omega^2 
+\end{array} } \]
 
 \newpage
 \section{Rotation vs. Translation}

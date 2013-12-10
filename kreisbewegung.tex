@@ -45,9 +45,12 @@ mit vier Gleichungen beschreiben:
 Wichtig ist der Zusammen zwischen den verschiedenen Beschleunigungen
 eines Rotierenden Körpers zu beachten.
 \[ \boxed{\begin{array}{r l}
-	a_{rad} & = \frac{\vec{v}^2}{r} 
+	\vec{a}_{rad} & = \frac{\vec{v}^2}{r} 
 		= \omega^2 \cdot r 
-		= \dot{\omega}^2 \cdot r
+		= \dot{\omega}^2 \cdot r \\
+	\vec{a}_{tan} & = \alpha \cdot r
+		= \ddot{\omega} \cdot r \\
+	\vec{a}_{res} & = \sqrt{\vec{a}_{rad}^2 + \vec{a}_{tan}^2} 
 \end{array} }\]
 
 \section{Winkelbetrachtung}\label{sec:winkelbetrachtung}
@@ -86,6 +89,7 @@ Formeln beschrieben werden.
 		\alpha & = \frac{d^2\theta}{dt^2} = \ddot{\theta}
 \end{array} }\]
 
+\newpage
 \section{Rotation vs. Translation}
 Wie im Kapitel \ref{sec:winkelbetrachtung} beschrieben, kann die 
 Rotation analog zur Translation betrachtet werden.

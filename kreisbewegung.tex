@@ -119,8 +119,62 @@ summiert werden, wenn diese auf der gleichen Drehachse rotieren.
 	I_{Total} = I_1 + I_2 + \dots + I_n
 } \]
 
+\newpage
 \subsection{Trägheitsmomente regelmässiger Körper}
 
+\begin{table}[h!]
+\centering
+\begin{tabular}{m{2cm} c m{0.35\textwidth}}
+Körper	& Achse	& $I$ \\
+\hline
+Kreisring, dünn &
+	\begin{minipage}{0.3\textwidth}
+	\includegraphics[scale=0.7]{traeg-kreisring-duenn.pdf}
+	\end{minipage} &
+		\begin{itemize}
+		\item[x] $m \cdot r^2$
+		\item[y] $\frac{m}{2} \cdot r^2$
+		\end{itemize} \\
+Kreisring &
+	\begin{minipage}{0.3\textwidth}
+	\includegraphics[scale=0.7]{traeg-kreisring.pdf}
+	\end{minipage} &
+		\begin{itemize}
+			\item[x] $m \cdot \left({r_1}^2 + \frac{3}{4}
+				\cdot {r_2}^2\right)$
+		\end{itemize} \\
+Kreisbogen &
+	\begin{minipage}{0.3\textwidth}
+	\includegraphics[scale=0.7]{traeg-kreisbogen.pdf}
+	\end{minipage} &
+		\begin{itemize}
+		\item[x] $\frac{m}{r^2} 
+			\left(1-\frac{sin(\alpha)}{\alpha} \right)$
+		\item[y]  $\frac{m}{r^2} 
+			\left(1+\frac{sin(\alpha)}{\alpha} \right)$
+		\item[z] $mr^2$
+		\end{itemize} \\
+Kreissektor &
+	\begin{minipage}{0.3\textwidth}
+	\includegraphics[scale=0.7]{traeg-kreissektor.pdf}
+	\end{minipage} &
+		\begin{itemize}
+		\item[x] $\frac{m}{4} r^2  
+			\left(1-\frac{sin(\alpha)}{\alpha} \right)$
+		\item[y]  $\frac{m}{4} r^2 
+			\left(1+\frac{sin(\alpha)}{\alpha} \right)$
+		\item[z] $\frac{m}{2} r^2$	
+		\end{itemize} \\
+Kreisscheibe, dünn &
+	\begin{minipage}{0.3\textwidth}
+	\includegraphics[scale=0.7]{traeg-kreisscheibe-duenn.pdf}
+	\end{minipage} &
+		\begin{itemize}
+		\item[x] $\frac{m}{2} r^2$
+		\item[y] $\frac{m}{4} r^2$
+		\end{itemize} \\
+\end{tabular}
+\end{table}
 
 \section{Rotationsenergie}
 Die Rotationsenergie ist im Grunde genommen die kinetische Enerige

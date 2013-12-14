@@ -71,15 +71,34 @@ werden.
 \noindent
 Werden Federn seriell angeordnet, so können die Federkonstanten reziprok 
 summiert werden.
-
-\[ \boxed{\frac{1}{k_{seriell}} = \sum_{i=1}^n \frac{1}{k_i} = 
-	\frac{1}{k_1} + \frac{1}{k_2} + \dots + \frac{1}{k_n}} \]
-
-\[ \boxed{\frac{E_1}{E_{Total}} = \frac{k_1 \cdot {k_2}^2}{k_1 + k_2}} \]  
-\[ \boxed{\frac{E_2}{E_{Total}} = \frac{{k_1}^2 \cdot k_2}{k_1 + k_2}} \]  
-\[ \boxed{\frac{E_1}{E_2} = \frac{k_2}{k_1}} \]
-\[ \boxed{\frac{E_2}{E_1} = \frac{k_1}{k_2}} \]
-
+\[ \boxed{\begin{array}{l l}\displaystyle
+	\frac{1}{k_{seriell}} & = 
+		\displaystyle \sum_{i=1}^n \frac{1}{k_i} = 
+		\displaystyle \frac{1}{k_1} + \frac{1}{k_2} 
+			+ \dots + \frac{1}{k_n} \\
+	& \\
+	k_{seriell} & = 
+		\displaystyle \sum_{i=1}^n \frac{1}{\frac{1}{k_i}} = 
+		\displaystyle \frac{1}{\frac{1}{k_1} + \frac{1}{k_2} 
+			+ \dots + \frac{1}{k_n}}
+\end{array}} \]
+Analog zur Elektrotechnik hat ein System bestehend aus zwei Federn
+in serieller Anordnung spezielle Verhältnisse zwischen Federkonstanten 
+und Energie.
+\[ \boxed{\begin{array}{r l | r l}
+\displaystyle
+\frac{E_1}{E_{Total}} & = 
+\displaystyle \frac{k_1 \cdot {k_2}^2}{k_1 + k_2} 
+	\qquad \qquad
+	& \qquad \displaystyle \frac{E_2}{E_{Total}}
+	& = \displaystyle \frac{{k_1}^2 \cdot k_2}{k_1 + k_2} \\
+& & & \\
+\displaystyle \frac{E_1}{E_2} & = 
+\displaystyle \frac{k_2}{k_1} 
+	\qquad \qquad
+	& \qquad \displaystyle \frac{E_2}{E_1} & = 
+	\displaystyle \frac{k_1}{k_2}
+\end{array}} \]
 \section{Federkonstante}
 Die Federkonstante ist eine material- und geometrieabhängige Grösse welche
 berechnet werden kann mittels des sogenannten Elastizitätsmoduls $E$, der

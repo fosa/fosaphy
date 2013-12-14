@@ -95,15 +95,34 @@ Formeln beschrieben werden.
 \end{array} }\]
 
 \section{Drehmoment}
-Wirkt eine Kraft nicht auf den Schwerpunkt eines Körpers, so ergibt
+Wirkt eine Kraft nicht auf die Drehachse eines Körpers, so ergibt
 sich aus dem Vektorprodukt von Versatz und Kraft das sogenannte
 Drehmoment.
-\[ \boxed{ 
-	\vec{M} = \vec{r} \times \vec{F}
-		\qquad \qquad
-	\vec{M} = \vec{r} \cdot \vec{F}
-		\quad \text{falls } \quad \vec{r} \bot \vec{F}
-} \]
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.8]{drehmoment.pdf}
+	\caption{Drehmoment komponentenweise betrachtet.}
+	\label{fig:drehmoment}
+\end{figure}
+
+\noindent
+Die Grafik \ref{fig:drehmoment} zeigt ein einfaches Besispiel der
+komponentenweisen Betrachtung von Kräften. Im Beispiel bewirkt lediglich
+die Komponente $\vec{F}_y$ ein Drehmoment, denn $\vec{F}_x$ wirkt auf
+die Drehachse und erzeugt somit kein Drehmoment.
+
+\[ \boxed{\begin{array}{l l} 
+	\vec{M} &= \vec{r} \times \vec{F}
+			\qquad \qquad
+		\vec{M} = \vec{r} \cdot \vec{F}
+			\quad \text{falls } \quad \vec{r} \bot \vec{F} \\
+	\vec{M} &
+		= r \cdot \vec{F}_\bot 
+		= r \cdot \vec{F} \cdot sin(\varphi) \\
+\end{array} }\]
+
+\noindent
 Wirken mehrere Kräfte auf verschiedene Punkte eines Körpers, so können
 die einzelnen Drehmomente zum Gesamtdrehmoment summiert werden.
 \[ \boxed{

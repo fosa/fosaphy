@@ -330,14 +330,13 @@ Drehache stets grösser ist, als mit einer Drehachse durch den Schwerpunkt
 (da $m,r>0$ sein muss).
 
 \newpage
-\section{Perfektes Rollen}
+\section{Perfektes Rollen}\label{sec:non-slip}
 Bei der Betrachtung von Rotationen gibt es einen Spezialfall welcher
 als perfektes Rollen bezeichnet wird (engl. \textit{non slip condition}).
 Hierbei meint man eine Rotation eines Körper über einer Auflage (z.B. 
-Untergrund, Seil etc.) wobei die Bewegung der Auflage identisch ist
-mit der Bewegung der Aussenseite des rotierenden Körpers, d.h. während
-des Rollens gilt stets die Haftreibung. Ein einfaches Beispiel aus dem
-Alltag ist das Rad, welches ideal bzw. perfekt rollt ohne zu rutschen.
+Untergrund, Seil etc.) wobei stets die Haftreibung herrscht. 
+Ein einfaches Beispiel aus dem Alltag ist das Rad, welches ideal bzw. 
+perfekt rollt ohne zu rutschen.
 
 \begin{figure}[h!]
 	\centering
@@ -363,8 +362,9 @@ zusammen; einer Translation und einer Rotation. Gilt dabei die sog.
 non slip condition, so können diese Bewegungen kombiniert betrachtet 
 werden, indem die Drehachse zum Auflagepunkt hin verschoben wird. 
 \[ \boxed{\begin{array}{c c c c}
-	x_{cm} 
-		&= r \cdot \theta & &  \\
+		& x_{cm} 
+		&= r \cdot \theta 
+		& \\
 	\vec{v}_{cm} 
 		&= \dot{x}_{cm} 
 		&= r \cdot \dot{\theta }
@@ -393,7 +393,21 @@ eines starren Körpers der um eine feste Achse rotiert.
 	& \\
 		& = \frac{1}{2} \cdot I \cdot \omega^2 
 \end{array} } \]
-
+Bei der Berechnung der Bewegungsenergie aus Translation und 
+Rotation muss auf die Lage der Drehachse geachtet werden. Insbesondere 
+gilt beim perfekten Rollen (siehe Kapitel \ref{sec:non-slip}) der 
+folgende Zusammenhang.
+\[ \boxed{\begin{array}{r l}
+	E_B &= E_{kin_{Translation}} + E_{kin_{Rotation}} \\
+	& \\
+	E_B &= \frac{1}{2} \cdot m_T \cdot {\vec{v}_{cm}}^2 
+		+ \frac{1}{2} \cdot I \cdot \omega^2 
+\end{array}}\]
+Die Masse $m_T$ ist die Summe aller translativ bewegter Massen. D.h. 
+wendet man die non-slip condition an und wählt die Drehachse an einem 
+versetzten Punkt (z.B. Auflagepunkt eines Rades), so müssen die nun
+rotierenden Massen von $m_T$ abgezogen werden, denn diese sind dann in
+der Rotation enthalten.
 \newpage
 \section{Rotation vs. Translation}
 Wie im Kapitel \ref{sec:winkelbetrachtung} beschrieben, kann die 

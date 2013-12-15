@@ -133,8 +133,8 @@ als Raketengleichung bezeichnet wird.
 \[  \boxed{
 	\sum \vec{F}_{extern} 
 		= m \cdot \frac{dv}{dt} 
-		- \vec{v}_{relativ} \cdot \frac{dm}{dt} \\
-} \]
+		- \vec{v}_{relativ} \cdot \frac{dm}{dt}
+	} \]
 Betrachtet man eine Rakete als System veränderlicher Masse, so können 
 den Termen aus der obigen Formel sinnvolle Bezeichnungen zugeordnet 
 werden. 
@@ -144,37 +144,35 @@ werden.
 	\caption{Rakete (l) und deren vereinfchtes Modell (r).}
 	\label{fig:rakete}
 \end{figure}
-Beispieslweise spricht man bei solchen Flugkörpern vom 
-sogenannten Schub, welcher angibt, wie stark die Rakete in 
-bewegungsrichtung getrieben wird. Ein weiterer Begriff wäre die 
-Gravitationskraft, welche die Rakete abbremst bzw. zurückhält.
-\[  \boxed{\begin{array}{l r l}
-\text{Resultierend Kraft}
-& \sum \vec{F}_{extern} 
-	& = \underbrace{
+
+\[ \boxed{\begin{array}{l l}
+\text{Raketengleichung}
+	& \sum \vec{F}_{extern} 
+	= \underbrace{
 		m \cdot \frac{dv}{dt}}_\text{bremsend}
 	- \underbrace{
-		\vec{v}_{relativ} \cdot \frac{dm}{dt}}_\text{treibend}\\
-	& & \\
-\text{Gravitationskraft}
-& \vec{F}_g 
-	& = m \cdot \frac{dv}{dt} = m \cdot \vec{a}_{Planet}\\
-	& & \\
-\text{Schubkraft}
-& \vec{F}_{Schub} 
-	& = \vec{v}_{relativ} \cdot \frac{dm}{dt} \\
+		\vec{v}_{relativ} \cdot \frac{dm}{dt}}_\text{treibend (Schub)} \\
+& \\
+\text{Gravitation}
+	& \vec{F}_G = \displaystyle
+		m \cdot \frac{dv}{dt} = m \cdot \vec{a} 
+		\quad \rightarrow \vec{a} = g \\
+& \\
+\text{Schub}
+	& \vec{F}_{Schub} = \displaystyle
+		\vec{v}_{relativ} \cdot \frac{dm}{dt} \\
+& \\
+\text{Beschleunigung}
+	& \vec{a}(t) = \displaystyle
+		\frac{\vec{v}_{relativ}}{m} 
+		\cdot \frac{dm}{dt} - g 
+	= \displaystyle
+		\frac{\vec{v}_{relativ}\cdot \frac{dm}{dt}}{
+		m_0 - \frac{dm}{dt} \cdot t} - g \\
+ & \\
+\text{Geschwindigkeit}
+	& \vec{v}(t) = \displaystyle
+		\vec{v}_{relativ} 
+		\cdot ln \left(\frac{m_0}{m_0-\frac{dm}{dt}\cdot t}\right)
+	- g \cdot t 
 \end{array} }\]
-Aus den oben genannten Zusmmenhängen lässt sich sowohl die Geschwindigkeit
-als auch die Beschleunigung formulieren als eine Funktion der Zeit 
-mittels der Integration von $dv$.
-\[ \int_{\vec{v}_0}^{\vec{v}} dv 
-	= - \int_{0}^{t} g dt 
-	+ \vec{v}_{relativ} \int_{m_0}^{m} \frac{dm}{m} \\
-\]	
-\[ \boxed{ 
-	\vec{v}(t) 
-		= \vec{v}_0 
-		- g \cdot t 
-		+ \vec{v}_{relativ} \cdot ln\left( \frac{dm}{m} \right)
-} \]
-

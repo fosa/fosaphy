@@ -321,8 +321,16 @@ Platte, dünn &
 \end{table}
 
 \newpage
-\section{Satz von Steiner}
+\section{Achsenbezogene Trägheitsmomente}
+Bei der Betrachtung von Trägheitsmomenten zu einer bestimmten Achse gibt 
+es zwei grundlegende Sätze die zur Berechnung verwendet werden können:
 
+\begin{itemize}
+	\item Satz von Steiner (Satz über parallele Achsen)
+	\item Satz über senkrechte Achsen
+\end{itemize}
+
+\subsection{Parallele Achsen}
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.7]{steiner.pdf}
@@ -336,17 +344,49 @@ das Trägheitsmoment eines Körpers zu berechnen, wenn dessen Drehachse nicht
 durch den Schwerpunkt des Körpers geht. Der Satz besagt, dass dies für 
 jeden Körper gleich berechnet werden kann wenn
 \begin{itemize}
-	\item das Trägheitmoment für die Drehachse durch den Schwerpunkt
+	\item das Trägheitsmoment für die Drehachse durch den Schwerpunkt
 		bekannt ist
 	\item die versetzte Drehachse parallel zur Drehachse durch den
 		Schwerpunkt geht
 \end{itemize}
 Sind diese Bedingungen erfüllt kann das Trägheitsmoment nach Steiner
 berechnet werden.
-\[ \boxed{ I_P = I_S + m \cdot r^2 } \]
+\[ \boxed{ I_{Parallel} = I_{Schwerpunkt} + m \cdot r^2 } \]
 Aus der obigen Formel geht hervor, dass das Trägheitsmoment bei versetzter
 Drehache stets grösser ist, als mit einer Drehachse durch den Schwerpunkt
 (da $m,r>0$ sein muss).
+
+\subsection{Senkrechte Achsen}
+Flache Körper, also Körper deren Höhe vernachlässigt werden kann, können
+mittels des Satzes über senkrechte Achsen betrachtet werden.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.8]{steiner2.pdf}
+	\caption{Flache Scheibe mit der Ebene $(x,y)$.}
+	\label{fig:steiner2}
+\end{figure}
+
+\noindent
+Der Satz besagt am Beispiel der Grafik \ref{fig:steiner2}, 
+dass das Trägheitsmoment senkrecht zur Ebene $(x,y)$ des 
+Körpers die Summe der zur Achse $z$ senkrecht stehenden Trägheitsmomente 
+ist. Dieser Satz gilt nur wenn
+\begin{itemize}
+	\item die Trägheitsmomente für $x,y,z$ durch den Schwerpunkt des 
+		Körpers gehen
+	\item die Trägheitsmomente für $x$ und $y$ senkrecht zueinander 
+		sind, also $x \bot y$ gilt
+	\item die Masse gleichmässig (also homogen) Verteilt ist
+\end{itemize}
+Sind diese Bedingungen erfüllt, kann das Trägheitsmoment nach dem Satz
+über senkrechte Achsen berechnet werden.
+\[ \boxed{I_z = I_x + I_y} \]
+Dieser Satz ist besonders dann geeignet, wenn ein Körper der Form einer
+Scheibe betrachtet wird (siehe Bild \ref{fig:steiner2}). 
+Denn wenn der Körper einen perfekten Kreis abbildet mit konstantem 
+Radius $r$, dann muss $I_x = I_y$ gelten und somit auch 
+$\frac{1}{2} I_z = I_x = I_y$.
 
 \newpage
 \section{Perfektes Rollen}\label{sec:non-slip}

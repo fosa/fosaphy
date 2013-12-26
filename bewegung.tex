@@ -18,168 +18,214 @@
 \chapter{Bewegung}
 
 \section{Gerade Bewegung}
+Die gerade Bewegung kennt vier elementare Grössen: 
+Weg $\vec{s}$, Geschwindigkeit $\vec{v}$, Beschleunigung $\vec{a}$ und
+die Zeit $t$. Alle diese Grössen, mit Ausnahme der Zeit $t$, sind 
+vektorielle Grössen.
 
-\[v=\lim\limits_{\Delta t \rightarrow 0}{\frac{\Delta x}{\Delta t}}=\frac{\mathrm{d}x}{\mathrm{d}t}=\dot{x}\]
-\[a=\lim\limits_{\Delta t \rightarrow 0}{\frac{\Delta v}{\Delta t}}=\frac{\mathrm{d}v}{\mathrm{d}t}=\dot{v}=\ddot{x}\]
-\[\Delta x=\lim\limits_{\Delta t_i \rightarrow 0}{\sum^{n}_{i=1}v_i\cdot\Delta t}=\int_{t_A}^{t_B}v\mathrm{d}t\]
+Diese drei vektoriellen Grössen, welche alle Funktionen der Zeit
+sind, können gegenseiten jeweils durch differenzieren oder integrieren 
+nach der Zeit $t$ hergeleitet werden, denn es gilt der folgende 
+Zusammenhang.
 
-\subsection{Spezialfall: konstante Beschleunigung a}
+\[ \boxed{\begin{array}{c c c c c}
+	\vec{x}(t) 
+		& \xrightarrow{\frac{d}{dt}}
+	& \vec{v}(t)
+		& \xrightarrow{\frac{d}{dt}}
+	& \vec{a}(t) \\
+	& & & & \\
+	\vec{x}(t) 
+		& \xleftarrow{\int dt}
+	& \vec{v}(t)
+		& \xleftarrow{\int dt}
+	& \vec{a}(t) \\
+\end{array}} \]
 
-\[a(t)=a=\mathrm{konstant}\]
-\[v(t)=v_0+a\cdot t\]
-\[x(t)=x_0+v_0\cdot t+\frac{1}{2}a^{2}\]
-\[\Delta x=x-x_0=v_0\cdot t+\frac{1}{2}\cdot a\cdot t^2\]
-\[v^2=v_{0}^{2}+2a\Delta x\]
-\[a=\frac{v(t)^2-v_0^2}{2\cdot\Delta s}\]
+\noindent
+Die Definitionen für die Momentanwerte sind dabei die Folgenden.
+\[\boxed{\begin{array}{r l}
+	\vec{v}	&
+		= \displaystyle \lim\limits_{P_2 \rightarrow P_1} 
+			{\left( \frac{x_2 - x_1}{t_2 - t_1} \right)}
+		= \displaystyle \lim\limits_{\Delta t \rightarrow 0}
+			{\frac{\Delta x}{\Delta t}}
+		= \displaystyle \frac{\mathrm{d}x}{\mathrm{d}t}=\dot{x} \\
+	& \\
+	\vec{a} &
+		= \displaystyle \lim\limits_{P_2 \rightarrow P_1}
+			{\left( \frac{\vec{v}_2 
+			- \vec{v}_1}{t_2 - t_1} \right)}
+		= \displaystyle \lim\limits_{\Delta t \rightarrow 0}
+			{\frac{\Delta v}{\Delta t}}
+		= \displaystyle \frac{\mathrm{d}v}{\mathrm{d}t}
+		= \displaystyle \dot{v}
+		= \ddot{x} \\
+	& \\
+	\Delta \vec{s} &
+		= \displaystyle \lim\limits_{n \rightarrow \infty}
+			{\left( \sum_{1}^{n} \Delta \vec{s}_i \right)}
+		= \displaystyle \lim\limits_{\Delta t_i \rightarrow 0}
+			{\sum^{n}_{i=1}\vec{v}_i\cdot\Delta t}
+		= \displaystyle \int_{t_A}^{t_B}\vec{v}\mathrm{d}t
+\end{array}}\]
+
+\subsection{Bewegung mit konstanter Beschleunigung}
+Bei einer Bewegung mit konstanter Beschleunigung $\vec{a}$, wie dies beim
+freien Fall oder dem schiefen Wurf der Fall ist, gelten die folgenden
+Zusammenhänge zwischen Weg $\vec{s}$, Geschwindigkeit $\vec{v}$ und 
+Zeit $t$.
+\[ \boxed{\begin{array}{r l} 
+	\vec{a}(t) 	&= \displaystyle
+		\vec{a} \\
+	& \\
+	\vec{v}(t)	&= \displaystyle 
+		\vec{v}_0+\vec{a}\cdot t \\
+	& \\
+	\vec{s}(t) 	&= \displaystyle 
+		\vec{s}_0+\vec{v}_0\cdot t+\frac{1}{2}\vec{a}^{2}
+\end{array}}\]
+Bei einer solchen Bewegung mit konstanter Beschleunigung $\vec{a}$ gelten
+insbesondere auch die folgenden Vereinfachungen.
+\[ \boxed{\begin{array}{r l}
+	\Delta \vec{s}	&= \displaystyle
+		\vec{s}-\vec{s}_0 = \displaystyle
+		\vec{v}_0\cdot t+\frac{1}{2}\cdot \vec{a}\cdot t^2 \\
+	& \\
+	\vec{v}^2 	&= \displaystyle
+		\vec{v}_{0}^{2}+2\vec{a} \cdot \Delta \vec{s} \\
+	& \\
+	\vec{v}_{av} &= \displaystyle
+		\frac{1}{2} \left( \vec{v}_0 + \vec{v} \right) \\
+	& \\
+	\vec{a} 	&= \displaystyle
+		\frac{\vec{v}(t)^2-\vec{v}_0^2}{2\cdot\Delta \vec{s}} 
+\end{array}}\]
 
 \section{Bewegung im Raum}
-Postition, Geschwindigkeit und Beschleunigung sind Vektoren.\\
-
-\begin{footnotesize}
-\boxed{
-\begin{tabular}{l}
-		$\vec{\Delta r}=\vec{r_2}-\vec{r_1}=(x_2-x_1,y_2-y_1,z_2-z_1)$\\ \\
-		$v\rightarrow\vec{v}=\lim\limits_{\Delta t \rightarrow 0}{\frac{\vec{\Delta r}}{\Delta t}}
-			=\frac{\mathrm{d}\vec{r}}{\mathrm{d}t}
-			=(\frac{\mathrm{d}x}{\mathrm{d}t},\frac{\mathrm{d}y}{\mathrm{d}t},\frac{\mathrm{d}z}{\mathrm{d}t})$\\ \\
-		$a\rightarrow\vec{a}=\lim\limits_{\Delta t \rightarrow 0}{\frac{\vec{\Delta v}}{\Delta t}}
-			=\frac{\vec{\mathrm{d}v}}{\mathrm{d}t}
-			=\frac{\mathrm{d^2}\vec{r}}{\mathrm{d}t^2}$
-\end{tabular}
-}
-\end{footnotesize}
-\newline
-
-
+Da die Grössen der Bewegung vektoriell sind, können diese auch 
+komponentenweise betrachtet werden.
+\[ \boxed{\begin{array}{r l}
+	\vec{\Delta r} &
+		= \vec{r}_2-\vec{r}_1
+		= (x_2-x_1,y_2-y_1,z_2-z_1) \\
+	& \\
+	v \rightarrow \vec{v} &
+		= \lim\limits_{\Delta t \rightarrow 0}
+			{\frac{\Delta \vec{r}}{\Delta t}}
+		= \frac{d\vec{r}}{dt}
+		= \left(\frac{dx}{dt},\frac{dy}{dt},\frac{dz}{dt}\right) \\
+	& \\
+	a \rightarrow \vec{a} &
+		= \lim\limits_{\Delta t \rightarrow 0}
+			{\frac{\Delta \vec{v}}{\Delta t}}
+		= \frac{d\vec{v}}{dt}
+		= \frac{d^2\vec{r}}{dt^2}
+\end{array}}\]
+		
 \subsection{Bahnkurve}
 
-Die Geschwindigkeit liegt immer \textbf{tangential} an der Bahnkurve. \newline
-\newline
-Die Beschleunigung zeigt immer nach \textbf{innen}.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.8]{bahnkurve.pdf}
+	\caption{Bahnkurve mit Tangente und Normale dazu.}
+	\label{fig:bahnkurve}
+\end{figure}
 
-\subsection{Kreisbewegung}
-Bei einer \textbf{gleichförmigen} Kreisbewegung ($v=\mathrm{konst.}$) gilt:
-\[
-	a_{ZP}=a_{radial}=\frac{v^2}{r}=\omega^2 \cdot r
-\]
-\newline
-\newline
-Bei einer \textbf{ungleichförmigen} Kreisbewegung gilt:
-\[
-	a_{radial}=\frac{v^2}{r}=\omega^2 \cdot r \\
-	a_{tangential}=\frac{\mathrm{d}\left|v\right|}{\mathrm{d}t}
-\]
+\noindent
+Betrachtet man die Grössen der Bewegung als Vektoren, so können diese 
+in ihre jeweiligen Komponenten in $x,y,z$ zerlegt werden. Hierbei gilt 
+insbesondere für die Geschwindigkeit $\vec{v}$ und die Beschleunigung
+$\vec{a}$, dass diese entlang einer Bahnkurve stets normal zueinander 
+sind oder anders formuliert:
+
+\begin{itemize}
+	\item Die Geschwindigkeit $\vec{v}$ liegt immer tangential an
+		der Bahnkurve an.
+	\item Gie Beschleunigung $\vec{a}$ zeigt immer nach innen, 
+		d.h. normal zur Geschwindigkeit $\vec{v}$.
+\end{itemize}
 
 \section{Schiefer Wurf}
+Der schiefe Wurf bezeichnet eine überlagerte Bewegung in mindestens zwei
+Richtungen (z.B. $x$ und $y$). Diese Bewegung kann komponentenweise 
+analysiert werden und per Superposition wieder zusammengesetzt werden.
 
-x- und y-Bewegung sind unabhängig:
-\newline
-\begin{footnotesize}
-\boxed{
-\begin{tabular}{ll}
-		\textbf{horizontal:}						&	\textbf{vertikal:}\\
-		$a_x=0$													&	$a_y=-g$ \\
-		$v_x=v_0*\cos\alpha_0$					& $v_y=v_0*\sin\alpha_0 - g \cdot t$ \\
-		$x=(v_0*\cos\alpha_0) \cdot t$	& $y=(v_0*\sin\alpha_0) \cdot t - \frac{1}{2}g \cdot t^2$ \\
-																		&	$v_y^2=v_{0y}^2-2gy$
-\end{tabular}
-}
-\end{footnotesize}
-\newline
-\newline
-Wurfdauer:
-\[
-	\boxed{t_R=\frac{2 \cdot v_{0y}}{g}=\frac{2v_0 \cdot\sin\theta}{g}}
-\]
-\newline
-Wurfweite:
-\[
-	\boxed{R=x(t_r)=\frac{v_0^2\sin2\theta}{g}}
-\]
-\newline
+\[\boxed{\begin{array}{r l  r l}
+	& \vec{x}\text{-Komponente} & & \vec{y}\text{-Komponente} \\
+	& & & \\
+	\vec{a}_x 
+		& = 0 
+		& \qquad \vec{a}_y 
+		& = -\vec{g} \\
+	 & & &  \\
+	\vec{v}_x 
+		& = \vec{v}_0 \cdot cos(\alpha_0)
+		& \vec{v}_y
+		& = \vec{v}_0 \cdot sin(\alpha_0) -\vec{g} \cdot t \\
+	 & & & \\
+	\vec{s}_x
+		& = \left( \vec{v}_0 \cdot cos(\alpha_0) \right) \cdot t
+		& \vec{s}_y
+		& = \left( \vec{v}_0 \cdot sin(\alpha_0) \right) \cdot t 
+			- \frac{1}{2}\vec{g} \cdot t^2
+\end{array}}\]
 
-\subsection{$x(t),y(t)\leftrightarrow y(x)$}
-\[
-	\boxed{
-		y(x)=\tan\theta_0 \cdot x-\frac{g}{2(v_0\cos\theta_0)^2}\cdot x^2
-	}
-\]
-\newline
-\begin{figure}[htbp]
-\centering
-\begin{gnuplot}[scale=0.62]
-	set terminal epslatex color
-	set grid
-  set xrange [0:100]
-	set yrange [-80:35]
-	set xtics 20
-	set ytics 20
-	set xlabel '$x$ [m]'
-	set ylabel '$y$ [m]'
-	set xzeroaxis
-	
-  # define the function
-  f(x,theta)=tan(pi/180*theta)*x-9.81/(2*(25*cos(pi/180*theta))**2)*x**2
+\noindent
+Aus den obigen Zusammenhängen zum schiefen Wurf lässt sich eine 
+Bahngleichung aufstellen, welche die Funktionen von $\vec{x}(t)$ und
+$\vec{y}(t)$ kombiniert zu einer Funktion $\vec{y}(\vec{x})$.
 
-  plot f(x,70) ti "$\\theta=70$",f(x,53.1) ti "$\\theta=53.1$",f(x,45) ti "$\\theta=45$",f(x,36.9) ti "$\\theta=36.9$",f(x,20) ti "$\\theta=20$"
-\end{gnuplot}
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.8]{wurf.pdf}
+	\caption{Schiefer Wurf.}
+	\label{fig:wurf}
 \end{figure}
 
-\subsection{schräge Zerlegung}
-Die Komponentenzerlegung eines Vektors ist beliebig. Manchmal ist eine schräge Zerlegung besser als eine Senkrechte,
-beispielsweise in die $\vec{v_0}$ und $\vec{g}$ Richtung:
-\newline
-\[
-	s=v_0 \cdot t \\
-	y=\frac{1}{2}g \cdot t^2
-\]
-\begin{figure}[htbp]
-\centering
-\begin{gnuplot}[scale=0.75]
-	set terminal epslatex color
-	set size ratio -1
-	set grid
-  set xrange [0:55]
-	set yrange [-5:15]
-	set xtics 5
-	set ytics 5
-	set format ""
-	unset key
+\[ \boxed{
+	\vec{y} = \vec{x} \cdot tan(\alpha) 
+		- \frac{\vec{g}}{2 \cdot \vec{v}_0^2 \cdot cos^2(\alpha)}
+		\cdot \vec{x}^2
+} \]
 
-  # define the function
-  f(x,theta)=tan(pi/180*theta)*x-9.81/(2*(25*cos(pi/180*theta))**2)*x**2
+\noindent
+Wichtig ist hierbei zu beachten, dass die passende Referenz für $\vec{y}$
+gewählt wird, denn es gelten dann die folgenden Bedingungen.
 
-	set style line 2 lc rgb 'black' pt 7   # circle
-	
-	set label 1 "$s=v_0 \\cdot t$" at 25,10 rotate by 20
-	set arrow from 0,0 to 35,12.739
-	
-	set label 2 "$\\vec{v_0}$" at 10,5
-	set arrow from 0,0 to 15,tan(pi/180*20)*15 linecolor rgb 'green' linewidth 3
-	
-	set label 3 "$y=\\frac{1}{2}g \\cdot t^2$" at 37,11 rotate right
-	set arrow from 35,12.739 to 35,f(35,20)
-	
-	set label 4 "$\\vec{v_0}$" at 45,7
-	set arrow from 35,f(35,20) to 50,tan(pi/180*20)*15+f(35,20) linecolor rgb 'green' linewidth 3
-	
-	set object circle at 35,f(35,20) size 0.2
-  plot f(x,20) ti ""
-	\end{gnuplot}
+\[ \boxed{\begin{array}{l l}
+	\text{Landestelle tiefer als Abwurfstelle} & \Rightarrow y < 0 \\
+	& \\
+	\text{Landestelle gleich wie Abwurfstelle} & \Rightarrow y = 0 \\
+	& \\
+	\text{Landestelle höher als Abwurfstelle} & \Rightarrow y > 0 
+\end{array}} \]
+
+
+\subsection{Schräge Zerlegung}
+Die Komponentenzerlegung eines Vektors kann beliebig erfolgen. 
+D.h. die Zerlegung muss nicht zwingend in $x,y$ oder $z$ erfolgen,
+sondern beliebig im Raum. Bei einigen Bewegungen ist dies von Vorteil,
+etwa beim waagrechten Wurf (Spezialfall des schiefen Wurfs).
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.8]{wurf2.pdf}
+	\caption{Schräge Komponentenzerlegung am waagrechten Wurf.}
+	\label{fig:wurf2}
 \end{figure}
 
-\subsection{Kraft}
-\[ F = \frac{dp}{dt} = m \dot a \]
-
-\subsection{Impuls}
-\[ \vec{p} = m \cdot \vec{v} \]
-
-\subsection{Kraftstoss}
-\[ \vec{J} = \int_{t_1}^{t2} (F(t)) ~ dt = \vec{p_2} - \vec{p_1} \]
-
-\subsection{Kinetische Energie}
-\[ E_{kin} = \frac{1}{2} \cdot m \cdot v^2 = \frac{p^2}{2 \cdot m} \]
-
-\subsection{Leistung}
-\[ P = \frac{dE}{dt} = \frac{F \cdot ds}{dt} = F \cdot v \]
+\noindent
+Mit dieser Zerlegung können die folgenden Zusammenhänge formuliert werden.
+\[ \boxed{\begin{array}{r l}
+	\vec{s} &
+		= \vec{v}_0 \cdot t
+		= \vec{v}_0 \cdot \sqrt{\frac{2 \cdot \vec{y}}{\vec{g}}} \\
+	& \\
+	\vec{y} &
+		= \frac{1}{2} \cdot \vec{g} \cdot t^2 \\
+	& \\
+	\vec{v}_B &
+		= \vec{v}_0 + \vec{g} \cdot t 
+\end{array}}\]
 

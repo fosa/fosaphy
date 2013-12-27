@@ -16,15 +16,67 @@
 %----------------------------------------
 
 \chapter{Reibung}
-\section{Reibung}
-Haftreibung: 
-\[ \boxed{F_{HR} \leq F_N \cdot \mu_{HR}} \]
-Wird $F_{HR} > F_N \cdot \mu_{HR}$, so beginnt der Körper zu rutschen. 
-Es gilt dann die Gleitreibung: 
-\[ \boxed{F_{GR} = F_N \cdot \mu_{GR}} \]
-Achtung! $F_N$ wirkt senkrecht zur Oberfläche! 
+
+\newpage
+
+\section{Reibungskraft}
+Die Reibungskraft $\vec{F}_R$ ist eine Kraft welche zwischen sich
+berührenden Körpern auftritt. Sie ist definiert als das Produkt aus
+der Kraft $\vec{F}_N$ welche normal zwischen den Körpern anliegt
+und dem Reibungskoeffizienten $\mu$ welcher die 
+Oberflächenbeschaffenheit beschreibt. 
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.8]{reibung.pdf}
+	\caption{Reibungskraft für eine Masse die auf einer Unterlage 
+		liegt mit $\sum \vec{F}_{extern}$ positiv (l)
+		und negativ (r).}
+\end{figure}
+
+\noindent
+Die Richtung der Reibungskraft ist dabei stets entgegen der 
+anliegenden äusseren Nettokraft 
+$\sum \vec{F}_{extern}$.
+
+\[ \boxed{
+	\vec{F}_R = \vec{F}_N \cdot \mu
+		\qquad ,\vec{F}_R \bot \vec{F}_N
+}\]
+
+\section{Bewegungsbedingung}
+\noindent
+Ein Körper der eine Reibung kennt, bringt eine Kraft $\vec{F}_R$ 
+auf entgegen der anliegenden Nettokraft $\sum \vec{F}_{extern}$. 
+Das bedeutet, dass ein solcher Körper in Ruhe bleibt, solange die 
+anliegende Nettokraft $\sum \vec{F}_{extern} \leq \vec{F}_R$ ist. 
+Somit ergibt sich die Bewegungsbedingung zu
+
+\[ \boxed{\begin{array}{l r l}
+	\text{Körper bleibt in Ruhe falls } & 
+		\sum \vec{F}_{extern} & \leq \vec{F}_R \\
+	& & \\
+	\text{Körper bewegt sich falls } &
+		\sum \vec{F}_{extern} & > \vec{F}_R 
+\end{array}} \]
 
 \section{Reibungskoeffizient}
+Der Reibungskoeffizient $\mu$ wird typischerweise für zwei Fälle 
+angegeben, welche voneinander zu unterscheiden sind.
+\begin{itemize}
+	\item Haften $\Rightarrow$ Haftreibungskoeffizient $\mu_{HR}$
+	\item Gleiten $\Rightarrow$ Gleitreibungskoeffizient $\mu_{GR}$
+\end{itemize}
+
+\noindent
+Für den Reibungskoeffizienten gilt stets, dass der Koeffizient für die
+Haftung grösser oder zumindest gleich ist wie für das Gleiten 
+(bei den selben Bedingungen).
+
+\[ \boxed{
+	\mu_{HR} \geq \mu_{GR}
+}\]
+
 \begin{footnotesize}
 \begin{longtable}{llll}
   \rowcolor{white} \textbf{Material 1} & \textbf{Material 2} 
@@ -44,4 +96,3 @@ Achtung! $F_N$ wirkt senkrecht zur Oberfläche!
 \end{longtable}
 \end{footnotesize}
 
-\section{Schiefe Ebene}

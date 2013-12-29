@@ -58,3 +58,30 @@ den zurückgelegten Weg.
 	E_{Reibung} = \mu \cdot \int \left( 
 		\vec{F}_N \cdot \vec{s} \right) ds} 
 \]
+
+\section{Leistung}\label{sec:leistung}
+Die Leistung $P$ einer Kraft ist die Rate, mit der sie Arbeit zuführt,
+also Arbeit pro Zeit.
+\[ \boxed{P = \frac{dW}{dt} } \]
+Mit der Überlegung, dass die Arbeit $W$ das Produkt aus Kraft und Weg
+ist, kann die Leistung auch als $\vec{F} \cdot \vec{s}$ beschrieben
+werden.
+\[ \boxed{
+	P 
+		= \frac{dW}{dt} 
+		= \frac{\vec{F} \cdot d\vec{s}}{dt}
+		= \vec{F} \cdot \frac{d\vec{s}}{dt} 
+		= \vec{F} \cdot \vec{v}
+} \]
+Hierbei gilt es wieder zu beachten, dass dies vektorielle Grössen sind
+und der jeweilige Winkel dazwischen zu berücksichtigen ist.
+
+\subsection{Mittlere Leistung}
+Mit der Definition aus den Kapitel \ref{sec:leistung} kann nun auch eine
+mittlere Leistung formuliert werden mittels der Integration zwischen
+zwei Zeitpunkten $t_1$ und $t_2$.
+\[ \boxed{
+	P_{average} 
+		= \frac{\int_{t_1}^{t_2} P dt}{t_2 - t_1}
+		= \frac{\Delta W}{\Delta t} 
+} \]

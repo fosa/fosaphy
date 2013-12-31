@@ -77,7 +77,7 @@ Die Definitionen für die Momentanwerte sind dabei die Folgenden.
 Bei einer Bewegung mit konstanter Beschleunigung $\vec{a}$, wie dies beim
 freien Fall oder dem schiefen Wurf der Fall ist, gelten die folgenden
 Zusammenhänge zwischen Weg $\vec{s}$, Geschwindigkeit $\vec{v}$ und 
-Zeit $t$.
+der Zeit $t$.
 
 \begin{figure}[h!]
 	\centering
@@ -89,30 +89,30 @@ Zeit $t$.
 \noindent
 Mit den in der Grafik \ref{fig:bewegung} gezeigten Zusammenhängen lassen
 sich Geschwindigkeit $\vec{v}$ und Weg $\vec{s}$ wie folgt beschreiben.
-\[ \boxed{\begin{array}{r l} 
-	\vec{a}(t) 	&= \displaystyle
+\[ \boxed{\begin{array}{c c l} 
+	\vec{a}(t) 	&=& \displaystyle
 		\vec{a} \\
 	& \\
-	\vec{v}(t)	&= \displaystyle 
+	\vec{v}(t)	&=& \displaystyle 
 		\vec{v}_0+\vec{a}\cdot t \\
 	& \\
-	\vec{s}(t) 	&= \displaystyle 
+	\vec{s}(t) 	&=& \displaystyle 
 		\vec{s}_0+\vec{v}_0\cdot t+\frac{1}{2}\cdot\vec{a}\cdot t^2
 \end{array}}\]
 Bei einer solchen Bewegung mit konstanter Beschleunigung $\vec{a}$ gelten
 insbesondere auch die folgenden Vereinfachungen.
-\[ \boxed{\begin{array}{r l}
-	\Delta \vec{s}	&= \displaystyle
+\[ \boxed{\begin{array}{c c l}
+	\Delta \vec{s}	&=& \displaystyle
 		\vec{s}-\vec{s}_0 = \displaystyle
 		\vec{v}_0\cdot t+\frac{1}{2}\cdot \vec{a}\cdot t^2 \\
 	& \\
-	\vec{v}^2 	&= \displaystyle
-		\vec{v}_{0}^{2}+2\vec{a} \cdot \Delta \vec{s} \\
+	\vec{v}^2 	&=& \displaystyle
+		\vec{v}_{0}^{2}+2\cdot\vec{a} \cdot \Delta \vec{s} \\
 	& \\
-	\vec{v}_{av} &= \displaystyle
+	\vec{v}_{av} &=& \displaystyle
 		\frac{1}{2} \left( \vec{v}_0 + \vec{v} \right) \\
 	& \\
-	\vec{a} 	&= \displaystyle
+	\vec{a} 	&=& \displaystyle
 		\frac{\vec{v}(t)^2-\vec{v}_0^2}{2\cdot\Delta \vec{s}} 
 \end{array}}\]
 Mit den obigen Vereinfachungen lassen sich nun die Formeln für 
@@ -129,7 +129,7 @@ Kombinationen formulieren (Winz'sche Tabelle).
 	& & & & & & \\
 	\vec{v} 
 		&=& \displaystyle 
-			\frac{1}{2} \cdot \frac{\vec{s}}{t}
+			2 \cdot \frac{\vec{s}}{t}
 		&=& \displaystyle 
 			\sqrt{2 \cdot \vec{a} \cdot \vec{s}}
 		&=& \displaystyle 
@@ -155,22 +155,23 @@ Kombinationen formulieren (Winz'sche Tabelle).
 \section{Bewegung im Raum}
 Da die Grössen der Bewegung vektoriell sind, können diese auch 
 komponentenweise betrachtet werden.
-\[ \boxed{\begin{array}{r l}
-	\vec{\Delta r} &
-		= \vec{r}_2-\vec{r}_1
+\[ \boxed{\begin{array}{c c l}
+	\vec{\Delta r} 
+		&=& \vec{r}_2-\vec{r}_1
 		= (x_2-x_1,y_2-y_1,z_2-z_1) \\
 	& \\
-	v \rightarrow \vec{v} &
-		= \lim\limits_{\Delta t \rightarrow 0}
+	v \rightarrow \vec{v} 
+		&=& \displaystyle \lim\limits_{\Delta t \rightarrow 0}
 			{\frac{\Delta \vec{r}}{\Delta t}}
-		= \frac{d\vec{r}}{dt}
-		= \left(\frac{dx}{dt},\frac{dy}{dt},\frac{dz}{dt}\right) \\
+		= \displaystyle \frac{d\vec{r}}{dt}
+		= \displaystyle
+		\left(\frac{dx}{dt},\frac{dy}{dt},\frac{dz}{dt}\right) \\
 	& \\
-	a \rightarrow \vec{a} &
-		= \lim\limits_{\Delta t \rightarrow 0}
+	a \rightarrow \vec{a} 
+		&=& \displaystyle \lim\limits_{\Delta t \rightarrow 0}
 			{\frac{\Delta \vec{v}}{\Delta t}}
-		= \frac{d\vec{v}}{dt}
-		= \frac{d^2\vec{r}}{dt^2}
+		= \displaystyle \frac{d\vec{v}}{dt}
+		= \displaystyle \frac{d^2\vec{r}}{dt^2}
 \end{array}}\]
 		
 \section{Bahnkurve}
@@ -199,32 +200,32 @@ sind oder anders formuliert:
 \section{Schiefer Wurf}
 Der schiefe Wurf bezeichnet eine überlagerte Bewegung in mindestens zwei
 Richtungen (z.B. $x$ und $y$). Diese Bewegung kann komponentenweise 
-analysiert werden und per Superposition wieder zusammengesetzt werden.
+analysiert werden und lässt sich per Superposition wieder zusammensetzen.
+Für den schiefen Wurf auf der Erde mit $\vec{a}_y=-\vec{g}$ und 
+$\vec{a}_x=0$ gelten die foldenden Zusammenhänge.
 
-\[\boxed{\begin{array}{r l  r l}
-	& \vec{x}\text{-Komponente} & & \vec{y}\text{-Komponente} \\
-	& & & \\
+\[\boxed{\begin{array}{r c l  r c l}
 	\vec{a}_x 
-		& = 0 
+		&=& 0 
 		& \qquad \vec{a}_y 
-		& = -\vec{g} \\
+		&=& -\vec{g} \\
 	 & & &  \\
 	\vec{v}_x 
-		& = \vec{v}_0 \cdot cos(\alpha_0)
+		&=& \vec{v}_0 \cdot cos(\alpha_0)
 		& \vec{v}_y
-		& = \vec{v}_0 \cdot sin(\alpha_0) -\vec{g} \cdot t \\
+		&=& \vec{v}_0 \cdot sin(\alpha_0) -\vec{g} \cdot t \\
 	 & & & \\
 	\vec{s}_x
-		& = \left( \vec{v}_0 \cdot cos(\alpha_0) \right) \cdot t
+		&=& \left( \vec{v}_0 \cdot cos(\alpha_0) \right) \cdot t
 		& \vec{s}_y
-		& = \left( \vec{v}_0 \cdot sin(\alpha_0) \right) \cdot t 
-			- \frac{1}{2}\vec{g} \cdot t^2
+		&=& \left( \vec{v}_0 \cdot sin(\alpha_0) \right) \cdot t 
+			- \frac{1}{2} \cdot \vec{g} \cdot t^2
 \end{array}}\]
 
 \noindent
 Aus den obigen Zusammenhängen zum schiefen Wurf lässt sich eine 
-Bahngleichung aufstellen, welche die Funktionen von $\vec{x}(t)$ und
-$\vec{y}(t)$ kombiniert zu einer Funktion $\vec{y}(\vec{x})$.
+Bahngleichung aufstellen, welche die Funktionen von $\vec{s}_x(t)$ und
+$\vec{s}_y(t)$ kombiniert zu einer Funktion $\vec{s}_y(\vec{x})$.
 
 \begin{figure}[h!]
 	\centering
@@ -234,21 +235,25 @@ $\vec{y}(t)$ kombiniert zu einer Funktion $\vec{y}(\vec{x})$.
 \end{figure}
 
 \[ \boxed{
-	\vec{y} = \vec{x} \cdot tan(\alpha) 
-		- \frac{\vec{g}}{2 \cdot \vec{v}_0^2 \cdot cos^2(\alpha)}
-		\cdot \vec{x}^2
+	\vec{s}_y = \vec{s}_x \cdot tan(\alpha_0) 
+		- \frac{\vec{g}}{2 \cdot \left(
+		\vec{v}_0 \cdot cos(\alpha_0) \right)^2}
+		\cdot {\vec{s}_x}^2
 } \]
 
 \noindent
-Wichtig ist hierbei zu beachten, dass die passende Referenz für $\vec{y}$
-gewählt wird, denn es gelten dann die folgenden Bedingungen.
+Wichtig ist hierbei zu beachten, dass die passende Referenz für 
+$\vec{s}_y$ gewählt wird, denn es gelten dann die folgenden Bedingungen.
 
 \[ \boxed{\begin{array}{l l}
-	\text{Landestelle tiefer als Abwurfstelle} & \Rightarrow y < 0 \\
+	\text{Landestelle tiefer als Abwurfstelle} 
+		& \Rightarrow \vec{s}_y < 0 \\
 	& \\
-	\text{Landestelle gleich wie Abwurfstelle} & \Rightarrow y = 0 \\
+	\text{Landestelle gleich wie Abwurfstelle} 
+		& \Rightarrow \vec{s}_y = 0 \\
 	& \\
-	\text{Landestelle höher als Abwurfstelle} & \Rightarrow y > 0 
+	\text{Landestelle höher als Abwurfstelle} 
+		& \Rightarrow \vec{s}_y > 0 
 \end{array}} \]
 
 
@@ -267,15 +272,19 @@ etwa beim waagrechten Wurf (Spezialfall des schiefen Wurfs).
 
 \noindent
 Mit dieser Zerlegung können die folgenden Zusammenhänge formuliert werden.
-\[ \boxed{\begin{array}{r l}
-	\vec{s} &
-		= \vec{v}_0 \cdot t
-		= \vec{v}_0 \cdot \sqrt{\frac{2 \cdot \vec{y}}{\vec{g}}} \\
-	& \\
-	\vec{y} &
-		= \frac{1}{2} \cdot \vec{g} \cdot t^2 \\
-	& \\
-	\vec{v}_B &
-		= \vec{v}_0 + \vec{g} \cdot t 
+\[ \boxed{\begin{array}{c c l}
+	\vec{s} 
+		&=& \vec{v}_0 \cdot t
+		= \vec{v}_0\cdot\sqrt{\frac{2\cdot\vec{s}_y}{\vec{g}}} \\
+	& & \\
+	\vec{s}_y 
+		&=& \frac{1}{2} \cdot \vec{g} \cdot t^2 \\
+	& & \\
+	\vec{v}_B 
+		&=& \vec{v}_0 + \vec{g} \cdot t
+		= \sqrt{{\vec{v}_0}^2 + {\vec{g}}^2 \cdot t^2} \\
+	& & \\
+	sin(\alpha)
+		&=& \displaystyle \frac{\vec{g}\cdot t}{\vec{v}_0}
 \end{array}}\]
 

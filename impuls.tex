@@ -50,17 +50,20 @@ durchschnittliche Kraft im Zeitintervall $\Delta t = t_2 - t_1$ bestimmen.
 	\frac{\vec{J}}{\Delta t} = \frac{\vec{p}_2 - \vec{p}_1}{t_2 - t_1}} \]
 
 \section{Impulserhaltung}
-In einem abgeschlossenem System\footnote{abgeschlossenes Intertialsystem} 
-ist der Gesamtimpuls stets konstant. Der Gesamtimpuls ist die Summe aller 
-Impulse im System. Die Impulserhaltung gilt ausnahmslos, d.h. auch bei 
-Stössen.
+In einem abgeschlossenem System\footnote{abgeschlossenes Intertialsystem},
+auf welches keine äusseren Kräfte wirken, ist der Gesamtimpuls stets 
+konstant. Der Gesamtimpuls ist die Summe aller Impulse im System. 
+Die Impulserhaltung gilt ausnahmslos, d.h. auch bei Stössen.
 
-\[ \vec{p} =
+\[ \boxed{\vec{p} =
 \begin{pmatrix}
 	p_{x_1} + p_{x_2} + \dots + p_{x_n} \\
 	p_{y_1} + p_{y_2} + \dots + p_{y_n} \\
 	p_{z_1} + p_{z_2} + \dots + p_{z_n} 
-\end{pmatrix} \]
+\end{pmatrix}
+= \text{konstant}
+\qquad ,\sum \vec{F}_{extern}=0
+}\]
 
 \section{Stoss}
 Mit einem Stoss meint man in der Mechanik eine kurze Wechselwirkung zwischen
@@ -147,7 +150,7 @@ Gesetzmässigekeiten hin berechnet werden.
 	\item Inelastischer Stoss (eher kompliziert)
 	\item Gesamtimpuls (eher einfach)
 \end{itemize}
-Der Gesamtimpuls $\sum \vec{F}_{extern} = \frac{d\vec{P}}{dt}$ wird nun
+Der Gesamtimpuls $\sum \vec{F}_{extern} = \frac{d\vec{p}}{dt}$ wird nun
 nicht nur durch die bewegte Masse, sondern auch durch den Massenstrom 
 $\dot{m}=\frac{dm}{dt}$ gebildet. 
 Mit der Grenzwertbetrachtung nach der Zeit $\frac{d}{dt}$ kann die
@@ -155,7 +158,7 @@ Betrachtung vereinfacht werden auf die folgende Form, welche auch
 als Raketengleichung bezeichnet wird.
 \[  \boxed{
 	\sum \vec{F}_{extern} 
-		= m \cdot \frac{dv}{dt} 
+		= m \cdot \frac{d\vec{v}}{dt} 
 		- \vec{v}_{relativ} \cdot \frac{dm}{dt}
 	} \]
 Betrachtet man eine Rakete als System veränderlicher Masse, so können 
@@ -172,13 +175,13 @@ werden wie Schub- oder Grawitationskraft.
 \text{Raketengleichung}
 	& \sum \vec{F}_{extern} 
 	= \underbrace{
-		m \cdot \frac{dv}{dt}}_\text{bremsend}
+		m \cdot \frac{d\vec{v}}{dt}}_\text{bremsend}
 	- \underbrace{
 		\vec{v}_{relativ} \cdot \frac{dm}{dt}}_\text{treibend (Schub)} \\
 & \\
 \text{Gravitation}
 	& \vec{F}_G = \displaystyle
-		m \cdot \frac{dv}{dt} = m \cdot \vec{a} 
+		m \cdot \frac{d\vec{v}}{dt} = m \cdot \vec{a} 
 		\quad \rightarrow \vec{a} = g \\
 & \\
 \text{Schub}
@@ -188,14 +191,18 @@ werden wie Schub- oder Grawitationskraft.
 \text{Beschleunigung}
 	& \vec{a}(t) = \displaystyle
 		\frac{\vec{v}_{relativ}}{m} 
-		\cdot \frac{dm}{dt} - g 
+		\cdot \frac{dm}{dt} - \vec{g} 
 	= \displaystyle
 		\frac{\vec{v}_{relativ}\cdot \frac{dm}{dt}}{
-		m_0 - \frac{dm}{dt} \cdot t} - g \\
+		m_0 - \left( \frac{dm}{dt} \cdot t\right)} - \vec{g} \\
  & \\
 \text{Geschwindigkeit}
 	& \vec{v}(t) = \displaystyle
 		\vec{v}_{relativ} 
-		\cdot ln \left(\frac{m_0}{m_0-\frac{dm}{dt}\cdot t}\right)
-	- g \cdot t 
+		\cdot ln \left(
+			\frac{m_0}{m_0-\left(
+				\frac{dm}{dt}\cdot t
+			\right)}
+		\right)
+		- \vec{g} \cdot t 
 \end{array} }\]

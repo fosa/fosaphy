@@ -65,9 +65,11 @@ Die Definitionen für die Momentanwerte sind dabei die Folgenden.
 	& \\
 	\Delta \vec{s} &
 		= \displaystyle \lim\limits_{n \rightarrow \infty}
-			{\left( \sum_{1}^{n} \Delta \vec{s}_i \right)}
+			{\left( \sum_{i=1}^{n} \Delta \vec{s}_i \right)}
 		= \displaystyle \lim\limits_{\Delta t_i \rightarrow 0}
-			{\sum^{n}_{i=1}\vec{v}_i\cdot\Delta t}
+			{\left(
+				\sum^{n}_{i=1}\vec{v}_i\cdot\Delta t
+			\right)}
 		= \displaystyle \int_{t_A}^{t_B}\vec{v}\mathrm{d}t
 \end{array}}\]
 

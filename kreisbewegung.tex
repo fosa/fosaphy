@@ -29,34 +29,39 @@ bezeichnet wird, kann auf verschiedene Weise berechnet werden.
 	= m \cdot \frac{4 \cdot \pi^2 \cdot r}{T^2} } \]
 Die Beziehungen zwischen den Bahngrössen lassen sich dabei 
 grundsätzlich mit vier Gleichungen beschreiben:
-\[ \boxed{ \begin{array}{l r l}
+\[ \boxed{ \begin{array}{l r c l}
 	\text{Bogenlänge $s$} & 
-		s & = r \cdot \theta \\
-	& & \\
+		s &=& r \cdot \theta \\
+	& & & \\
 	\text{Geschwindigkeit tangential $\vec{v}$} &
-		\vec{v} & = r \cdot \omega
+		\vec{v} &=& r \cdot \omega
 		= r \cdot \frac{d\theta}{dt} \\
-	& & \\
+	& & & \\
 	\text{Beschleunigung tangential $\vec{a}_{tan}$} &
-		\vec{a}_{tan} & = r \cdot \alpha 
+		\vec{a}_{tan} &=& r \cdot \alpha 
 		= r \cdot \frac{d^2\theta}{dt} \\
-	& & \\
+	& & & \\
 	\text{Beschleunigung radial $\vec{a}_{rad}$} &
-		\vec{a}_{rad} & = \frac{v^2}{r} = \omega^2 \cdot r
+		\vec{a}_{rad} &=& \frac{v^2}{r} = \omega^2 \cdot r
 \end{array} }\]
 
 \noindent
-Wichtig ist der Zusammenhang zwischen den verschiedenen Beschleunigungen
-eines rotierenden Körpers zu beachten.
-\[ \boxed{\begin{array}{r l}
-	\vec{a}_{rad} & = \frac{\vec{v}^2}{r} 
-		= \omega^2 \cdot r 
-		= \dot{\theta}^2 \cdot r \\
-	& \\
-	\vec{a}_{tan} & = \alpha \cdot r
-		= \ddot{\theta} \cdot r \\
-	& \\
-	\vec{a}_{res} & = \sqrt{\vec{a}_{rad}^2 + \vec{a}_{tan}^2} 
+Wichtig ist dabei stets den Zusammenhang zwischen den verschiedenen 
+Beschleunigungen eines rotierenden Körpers zu beachten.
+\[ \boxed{\begin{array}{r c l}
+	\vec{a}_{rad} 
+		&=& \displaystyle \frac{\vec{v}^2}{r} 
+		= \displaystyle \omega^2 \cdot r
+		= \displaystyle \left(\frac{d\theta}{dt}\right)^2 \cdot r
+		= \displaystyle \dot{\theta}^2 \cdot r \\
+	& & \\
+	\vec{a}_{tan} 
+		&=& \displaystyle \alpha \cdot r
+		= \displaystyle \left(\frac{d^2\theta}{dt^2}\right) \cdot r
+		= \displaystyle \ddot{\theta} \cdot r \\
+	& & \\
+	\vec{a}_{res} 
+		&=& \sqrt{\vec{a}_{rad}^2 + \vec{a}_{tan}^2} 
 \end{array} }\]
 
 \section{Winkelbetrachtung}\label{sec:winkelbetrachtung}
@@ -85,14 +90,14 @@ Beschleunigung wie in der Translation.
 \noindent
 Die einzelnen Grössen $\omega$ und $\alpha$ können mit den folgenden 
 Formeln beschrieben werden.
-\[ \boxed{\begin{array}{l r l}
+\[ \boxed{\begin{array}{l r c l}
 	\text{Winkelgeschwindigkeit} &
-		\omega & = \omega_0 + \alpha \cdot t 
-			= \frac{d\theta}{dt} 
-			= \dot{\theta} \\
+		\omega &=& \omega_0 + \alpha \cdot t 
+			= \displaystyle \frac{d\theta}{dt} 
+			= \displaystyle \dot{\theta} \\
 	& & \\
 	\text{Winkelbeschleunigung} &
-		\alpha & = \frac{d^2\theta}{dt^2} = \ddot{\theta}
+		\alpha &=& \displaystyle \frac{d^2\theta}{dt^2} = \ddot{\theta}
 \end{array} }\]
 
 \section{Drehmoment}
@@ -113,13 +118,14 @@ komponentenweisen Betrachtung von Kräften. Im Beispiel bewirkt lediglich
 die Komponente $\vec{F}_y$ ein Drehmoment, denn $\vec{F}_x$ wirkt auf
 die Drehachse und erzeugt somit kein Drehmoment.
 
-\[ \boxed{\begin{array}{l l} 
-	\vec{M} &= \vec{r} \times \vec{F}
+\[ \boxed{\begin{array}{l c l} 
+	\vec{M} &=& \vec{r} \times \vec{F}
 			\qquad \qquad
 		\vec{M} = \vec{r} \cdot \vec{F}
 			\quad \text{falls } \quad \vec{r} \bot \vec{F} \\
-	\vec{M} &
-		= r \cdot \vec{F}_\bot 
+	& & \\ 
+	\vec{M} 
+		&=& r \cdot \vec{F}_\bot 
 		= r \cdot \vec{F} \cdot sin(\varphi) \\
 \end{array} }\]
 
@@ -127,11 +133,11 @@ die Drehachse und erzeugt somit kein Drehmoment.
 Wirken mehrere Kräfte auf verschiedene Punkte eines Körpers, so können
 die einzelnen Drehmomente zum Gesamtdrehmoment summiert werden.
 \[ \boxed{
-	\vec{M} = \sum \vec{r}_i \times \vec{F}_i
-	= \vec{r}_1 \times \vec{F}_1 
-		+ \vec{r}_2 \times \vec{F}_2
+	\vec{M} = \sum \left(\vec{r}_i \times \vec{F}_i\right)
+	= \left(\vec{r}_1 \times \vec{F}_1 \right)
+		+ \left( \vec{r}_2 \times \vec{F}_2 \right)
 		+ \dots 
-		+ \vec{r}_n \times \vec{F}_n 
+		+ \left( \vec{r}_n \times \vec{F}_n \right)
 } \]
 Analog zur linearen Bewegung kann auch bei der Betrachtung von Drehmomenten
 das zweite Newton'sche Axiom angewandt werden, denn ein resultierendes
@@ -162,10 +168,10 @@ Das Trägheitsmoment wird beschrieben durch die Summe der
 Produkte aus den Massepunkten und deren Abstand im Quadrat zur 
 Drehachse des Körpers.
 \[ \boxed{
-	I = m_1 \cdot r_1^2
-		+ m_2 \cdot r_2^2 
+	I = \left(m_1 \cdot r_1^2 \right)
+		+ \left( m_2 \cdot r_2^2 \right)
 		+ \dots 
-		+ m_n \cdot r_n^2
+		+ \left( m_n \cdot r_n^2 \right)
 		= \sum m_i \cdot r_i^2
 		= \int r^2 \cdot dm
 } \]
@@ -378,7 +384,7 @@ ist. Dieser Satz gilt nur wenn
 		Körpers gehen
 	\item die Trägheitsmomente für $x$ und $y$ senkrecht zueinander 
 		sind, also $x \bot y$ gilt
-	\item die Masse gleichmässig (also homogen) Verteilt ist
+	\item die Masse gleichmässig (also homogen) verteilt ist
 \end{itemize}
 Sind diese Bedingungen erfüllt, kann das Trägheitsmoment nach dem Satz
 über senkrechte Achsen berechnet werden.
@@ -416,24 +422,24 @@ Translation und Rotation kombiniert wird (von links nach rechts).
 		Jeder Massepunkt bewegt sich dabei mit $\vec{v}_{cm}$
 		tangential zur Drehachse.
 	\item{Bild 4:} Rotation und Translation kombiniert sich bei
-		Drehachse im Auflagepunkt $A$.
+		Drehachse im Auflagepunkt $A$ (dort ist $\vec{v}=0$).
 \end{itemize}
 Die Bewegung eines rollenden Rades setzt sich also aus zwei Bewegungen
 zusammen; einer Translation und einer Rotation. Gilt dabei die sog. 
 non slip condition, so können diese Bewegungen kombiniert betrachtet 
 werden, indem die Drehachse zum Auflagepunkt hin verschoben wird. 
-\[ \boxed{\begin{array}{c c c c}
-		& x_{cm} 
-		&= r \cdot \theta 
-		& \\
+\[ \boxed{\begin{array}{c c c c c c c}
+		& & x_{cm} 
+		&=& r \cdot \theta 
+		& & \\
 	\vec{v}_{cm} 
-		&= \dot{x}_{cm} 
-		&= r \cdot \dot{\theta }
-		& =r \cdot \omega \\
+		&=& \dot{x}_{cm} 
+		&=& r \cdot \dot{\theta }
+		&=& r \cdot \omega \\
 	\vec{a}_{cm} 
-		&= \ddot{x}_{cm}
-		&= r \cdot \ddot{\theta}
-		&= r \cdot \alpha
+		&=& \ddot{x}_{cm}
+		&=& r \cdot \ddot{\theta}
+		&=& r \cdot \alpha
 \end{array}}\]
 
 \section{Rotationsenergie}

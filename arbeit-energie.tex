@@ -30,7 +30,10 @@ allem die potentielle und kinetische Energie behandelt.
 Die potentielle Energie ist definiert als jene Energie, welche sich aus
 einem Höhenunterschied (Potentialdifferenz) einer Masse zu einer 
 Referenzhöhe ergibt. 
-\[ \boxed{ E_{Pot} = m \cdot g \cdot (h - h_{Ref}) } \]
+\[ \boxed{ E_{Pot} 
+	= m \cdot \vec{g} \cdot (h - h_{Ref})
+	= m \cdot \vec{g} \cdot \Delta h 
+} \]
 
 \subsection{Kinetische Energie}
 Die kinetische Energie ist proportional zur Masse des sich bewegenden Körpers
@@ -39,20 +42,22 @@ Betrachtung der Bewegung des Körpers, vor allem zu welcher Referez die
 Geschwindigkeit gilt (Relativgeschwindugkeit).
 \[ \boxed{ E_{Kin_{Translation}} = \frac{m \cdot \vec{v}^2}{2} } \]
 Die kinetische Energie kann aber auch eine Rotation beschreiben.
-\[ \boxed{ E_{Kin_{Rotation}} = \frac{\vec{J} \cdot \omega^2}{2} } \]
+\[ \boxed{ E_{Kin_{Rotation}} = \frac{I \cdot \omega^2}{2} } \]
 
 \subsection{Federenergie}
 Die Federengergie ist definiert als das Produkt aus Federkonstante $k$ und 
 dem Integral der Dehnung bzw. des Weges $s$ 
 (siehe Kapitel \ref{sec:feder-energie}).
-\[ \boxed{E_{Feder} = k \cdot \int_{s_a}^{s_b} s \cdot ds = \frac{k \cdot s^2}{2}} \]
+\[ \boxed{E_{Feder} 
+	= k \cdot \int_{\vec{s}_a}^{\vec{s}_b} \vec{s} \cdot d\vec{s} 
+	= \frac{k \cdot \vec{s}^2}{2}} \]
 
 \subsection{Reibungsenergie}
 Analog zur potentiellen Energie ist die Reibungsenerige durch eine Kraft
-$\vec{F}_N \cdot \mu$ und einen Weg $s$ definiert. 
+$\vec{F}_N \cdot \mu$ und einen Weg $\vec{s}$ definiert. 
 $\vec{F}_N$ ist dabei die Kraft, welche senkrecht zur reibenden Unterlage 
-wirkt, also $\vec{F}_N \bot s$.
-\[ \boxed{E_{Reibung} = \vec{F}_N \cdot \mu \cdot s} \]
+wirkt, also $\vec{F}_N \bot \vec{s}$.
+\[ \boxed{E_{Reibung} = \vec{F}_N \cdot \mu \cdot \vec{s}} \]
 Diese kann auch allgemein formuliert werden mittels des Integrals über
 den zurückgelegten Weg.
 \[ \boxed{
@@ -62,11 +67,12 @@ den zurückgelegten Weg.
 
 \section{Leistung}\label{sec:leistung}
 Die Leistung $P$ einer Kraft ist die Rate, mit der sie Arbeit zuführt,
-also Arbeit pro Zeit.
+also die Arbeit pro Zeit.
 \[ \boxed{P = \frac{dW}{dt} } \]
 Mit der Überlegung, dass die Arbeit $W$ das Produkt aus Kraft und Weg
 ist, kann die Leistung auch als $\vec{F} \cdot \vec{s}$ beschrieben
-werden.
+werden. Mit dieser Formulierung lässt sich die Arbeit auch als Kraft mal
+Geschwindigkeit aufstellen.
 \[ \boxed{
 	P 
 		= \frac{dW}{dt} 
@@ -83,6 +89,7 @@ mittlere Leistung formuliert werden mittels der Integration zwischen
 zwei Zeitpunkten $t_1$ und $t_2$.
 \[ \boxed{
 	P_{average} 
-		= \frac{\int_{t_1}^{t_2} P dt}{t_2 - t_1}
+		= \frac{\displaystyle\int_{t_1}^{t_2} P\cdot dt}
+			{t_2 - t_1}
 		= \frac{\Delta W}{\Delta t} 
 } \]

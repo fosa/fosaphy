@@ -11,11 +11,12 @@
 \end{figure}
 
 \noindent
-Eine Feder kann gedrückt oder gezogen werden, wobei eine Kraft $F$ entsteht,
-welche proportional zur Dehnung $s$ ist. Die Proportionalität wird durch die
-sogenannte Federkonstante $k$ beschrieben. Dies wird auch als Hook'sches
-Gesetz bezeichnet.
-\[ \boxed{F_{Feder} = k \cdot s} \]
+Eine Feder kann gedrückt oder gezogen werden, wobei eine Kraft $\vec{F}$ 
+entsteht, welche proportional zur Dehnung $\vec{s}$ ist. 
+Die Proportionalität wird durch die sogenannte Federkonstante $k$ 
+beschrieben. Dies wird auch als Hook'sches Gesetz bezeichnet.
+
+\[ \boxed{\vec{F}_{Feder} = k \cdot \vec{s}} \]
 
 \noindent
 Die Richtung der Kraft ist hierbei stets entgegen der Dehnung, d.h. wird die
@@ -24,7 +25,7 @@ gestaucht, so zeigt die Kraft von der Feder weg.
 
 \section{Energie}\label{sec:feder-energie}
 Die Energie einer Feder ist definiert als die Federkonstante $k$ multipliziert
-mit dem Integral der Dehnung (Weg $\Delta s$ bzw. s).
+mit dem Integral der Dehnung (Weg $\Delta \vec{s}$ bzw. $\vec{s}$).
 \begin{figure}[h!]
 	\centering
 	\includegraphics[scale=0.9]{feder-energie.pdf}
@@ -32,11 +33,14 @@ mit dem Integral der Dehnung (Weg $\Delta s$ bzw. s).
 	\label{fig:feder-energie}
 \end{figure}
 
-\[ \boxed{E_{Feder} = k \cdot \int_{s_a}^{s_b} s \cdot ds = \frac{k \cdot s^2}{2}} \] \\
+\[ \boxed{E_{Feder} 
+	= k \cdot \int_{\vec{s}_a}^{\vec{s}_b} \vec{s} \cdot d\vec{s} 
+	= \frac{1}{2} \cdot k \cdot \vec{s}^2
+} \] \\
 
 \section{Kombination}
-Federn können nicht nur einzeln sondern in Kombinationen vorkommen. Hierbei
-werden im speziellen zwei Fälle unterschieden:
+Federn können nicht nur einzeln sondern auch in Kombinationen vorkommen. 
+Hierbei werden im speziellen zwei Fälle unterschieden:
 
 \begin{itemize}
 	\item Parallele Anordnung von Federn
@@ -65,7 +69,10 @@ werden im speziellen zwei Fälle unterschieden:
 Werden Federn parallel angeordnet, so können die Federkosntanten summiert 
 werden.
 
-\[ \boxed{k_{parallel} = \sum_{i=1}^n k_i = k1 + k2 + \dots + k_n} \]
+\[ \boxed{k_{parallel} 
+	= \sum_{i=1}^n k_i 
+	= k_1 + k_2 + \dots + k_n
+} \]
 
 \subsection{Serielle Anordnung}
 
@@ -73,31 +80,34 @@ werden.
 Werden Federn seriell angeordnet, so können die Federkonstanten reziprok 
 summiert werden.
 \[ \boxed{\begin{array}{l l}\displaystyle
-	\frac{1}{k_{seriell}} & = 
-		\displaystyle \sum_{i=1}^n \frac{1}{k_i} = 
+	\frac{1}{k_{seriell}} 
+		&= \displaystyle \sum_{i=1}^n \frac{1}{k_i} = 
 		\displaystyle \frac{1}{k_1} + \frac{1}{k_2} 
 			+ \dots + \frac{1}{k_n} \\
 	& \\
-	k_{seriell} & = 
-		\displaystyle \sum_{i=1}^n \frac{1}{\frac{1}{k_i}} = 
-		\displaystyle \frac{1}{\frac{1}{k_1} + \frac{1}{k_2} 
-			+ \dots + \frac{1}{k_n}}
+	k_{seriell} 
+		&= \displaystyle \frac{1}{\left( 
+			\displaystyle \sum_{i=1}^n\frac{1}{k_i}\right)} 
+		= \displaystyle \frac{1}{\left(
+			\frac{1}{k_1} + \frac{1}{k_2} 
+			+ \dots + \frac{1}{k_n} \right)}
 \end{array}} \]
 Analog zur Elektrotechnik hat ein System bestehend aus zwei Federn
 in serieller Anordnung spezielle Verhältnisse zwischen Federkonstanten 
 und Energie.
-\[ \boxed{\begin{array}{r l | r l}
+\[ \boxed{\begin{array}{r c l  r c l}
 \displaystyle
-\frac{E_1}{E_{Total}} & = 
-\displaystyle \frac{k_1 \cdot {k_2}^2}{k_1 + k_2} 
+\frac{E_1}{E_{Total}} 
+	&=& \displaystyle \frac{k_1 \cdot {k_2}^2}{k_1 + k_2} 
 	\qquad \qquad
 	& \qquad \displaystyle \frac{E_2}{E_{Total}}
-	& = \displaystyle \frac{{k_1}^2 \cdot k_2}{k_1 + k_2} \\
-& & & \\
-\displaystyle \frac{E_1}{E_2} & = 
-\displaystyle \frac{k_2}{k_1} 
+	&=& \displaystyle \frac{{k_1}^2 \cdot k_2}{k_1 + k_2} \\
+ & & & & & \\
+\displaystyle \frac{E_1}{E_2} 
+	&=& \displaystyle \frac{k_2}{k_1} 
 	\qquad \qquad
-	& \qquad \displaystyle \frac{E_2}{E_1} & = 
+	& \qquad \displaystyle \frac{E_2}{E_1} 
+	&=& 
 	\displaystyle \frac{k_1}{k_2}
 \end{array}} \]
 \section{Federkonstante}

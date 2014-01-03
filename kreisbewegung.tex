@@ -483,11 +483,82 @@ werden, indem die Drehachse zum Auflagepunkt hin verschoben wird.
 		&=& r \cdot \alpha
 \end{array}}\]
 
+\subsection{Reibungskraft und Trägheit}
+Bei der Betrachtung von Rotationen welche die sogenannte 
+\textit{non-slip condition} erfüllen, also perfekt rollen, können die 
+zum Rollen nötige Reibungskraft $\vec{F}_R$ und die Scheinkraft der 
+translativen Trägheit $\vec{F}_T$ leicht bestimmt werden.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.8]{non-slip-kraft.pdf}
+	\caption{Reibungskraft $\vec{F}_R$ die im Auflaugepunkt 
+		wirkt für Drehachse bei $cm$ und 
+		Trägheit die auf $cm$ wirkt bei Drehachse bei A}
+	\label{fig:non-slip-kraft}
+\end{figure}
+
+\noindent
+Hierzu muss jeweils die richtige Drehachse gewählt werden (siehe
+Grafik \ref{fig:non-slip-kraft}) und je nach Situation der Satz von
+Steiner angewandt werden.
+
+\[ \boxed{\begin{array}{l c l}
+	\text{Reibung } \vec{F}_R 
+		& \xrightarrow{rot_{cm}}
+		& I = I_{cm} \\
+	 & & \\
+	\text{Trägheit } \vec{F}_T 
+		& \xrightarrow{rot_A}
+		& I = I_{cm} + I_A \qquad,I_A = m \cdot r^2
+\end{array}}\]
+
+\[ \boxed{\begin{array}{c c l}
+	\vec{F}_R \cdot r 
+		& =
+		& \vec{M}_{cm} = I_{cm} \cdot \alpha 
+		\qquad \xrightarrow{non-slip} 
+			\displaystyle
+			\alpha = \frac{\vec{a}_{cm}}{r} \\
+%	& & \\
+%	 	& \Rightarrow 
+%		& \vec{F}_R \cdot r 
+%			= \displaystyle 
+%				(C \cdot m \cdot r^2) 
+%				\cdot \frac{\vec{a}_{cm}}{r}
+%			= \displaystyle 
+%				C \cdot m \cdot r 
+%				\cdot \vec{a}_{cm} \\
+	& & \\
+		& \Rightarrow 
+		& \vec{F}_R = C \cdot m \cdot \vec{a}_{cm} \\
+	& & \\
+	& & \\
+	\vec{F}_T \cdot r 
+		& = 
+		& \vec{M}_{A} = (I_{cm} + I_P) \cdot \alpha
+		\qquad \xrightarrow{non-slip}
+			\displaystyle
+			\alpha = \frac{\vec{a}_{cm}}{r} \\
+%	& & \\
+%		& \Rightarrow
+%		& \vec{F}_T \cdot r = \displaystyle
+%			(I_{cm}+I_A) \cdot \frac{\vec{a}_{cm}}{r} \\
+%	& & \\
+%		& =
+%		& \vec{F}_T \cdot r = \displaystyle 
+%			(C \cdot m \cdot r^2 + m \cdot r^2) \cdot 
+%			\frac{\vec{a}_{cm}}{r} \\
+	& & \\
+		& \Rightarrow 
+		& \vec{F}_T = (C + 1) \cdot m \cdot \vec{a}_{cm}
+\end{array} } \]
+
 \section{Rotationsenergie}
 Die Rotationsenergie ist im Grunde genommen die kinetische Enerige
 eines starren Körpers der um eine feste Achse rotiert.
 \[ \boxed{\begin{array}{r c l}
-	E_{kin} 
+E_{kin} 
 		&=& \frac{1}{2} \cdot m \cdot \vec{v}^2 \\
 	& & \\
 	\Rightarrow E_{rot} 

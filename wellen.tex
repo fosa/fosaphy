@@ -17,24 +17,19 @@
 
 \chapter{Wellen}
 \section{Allgemein}
-\[ \boxed{f(x,t) = f^*(x \pm v \cdot t} \]
+\[ \boxed{f(x,t) = f^*(x \pm v \cdot t)} \]
 
 \section{Seilwelle}
 \begin{tabular}{@{}ll}
-$FS$:   & Seilkraft in $kg \frac{m}{s^2}$ \\
+$F_S$:   & Seilkraft in $kg \frac{m}{s^2}$ \\
 $\mu$:  & Längendichte in $\frac{kg}{m}$ \\
 $v$:    & Geschwindigkeit
 \end{tabular}
-Winkel klein: $\cos\phi \approx 1 \quad \sin\phi \approx \phi \approx \tan\phi$
-\[ \boxed{-Fs \sin \phi_L + F_s \sin \phi_R 
-= F_s (\frac{\partial}{\partial x} f(x,t) 
-- \frac{\partial}{\partial x} f(x-\Delta x,t) )} \]
-Wellengleichung: 
-\[ \boxed{\frac{F_s}{\mu} \frac{\partial^2}{\partial x^2} f(x,t) 
-= \frac{\partial^2}{\partial t^2} f(x,t)} \]
-Gag: Jede Funktionen der Form $f(x,t) = f^*(x \pm v t)$ ist eine Lösung
+% Wellengleichung: 
+% \[ \boxed{\frac{F_s}{\mu} \frac{\partial^2}{\partial x^2} f(x,t) 
+% = \frac{\partial^2}{\partial t^2} f(x,t)} \]
+% Gag: Jede Funktionen der Form $f(x,t) = f^*(x \pm v t)$ ist eine Lösung
 \[ \boxed{v = \sqrt{\frac{F_s}{\mu}}} \]
-- nach rechts, + nach links
 \[ \boxed{t = \frac{s}{v}} \]
 Anfangsbedingung (rechtslaufende Welle): 
 \[ \boxed{f(x,0) = f^*(x) = A \cos(\frac{2 \pi}{\lambda} x + \phi)} \]
@@ -52,18 +47,19 @@ Fluid:
 Kompressibilität: 
 \[ \boxed{\kappa = -\frac{1}{V} \frac{d V}{d \rho}} \]
 Festkörper: 
-\[ \boxed{\sqrt{\frac{E}{\rho}}} \]
+\[ \boxed{v = \sqrt{\frac{E}{\rho}}} \]
 \begin{tabular}{ll}
-Luft (20C) & 343 m/s \\
-Helium (20C) & 999 m/s \\
-Wasserstoff (20C) & 1330 m/s \\
-flüssiges Helium (4k) & 211 m/s \\
-Wasser (0C) & 1402 m/s \\
-Wasser (20C) & 1482 m/s \\
-Quecksilber (20C) & 1451 m/s \\
-Aluminium & 6420 m/s \\
-Blei & 1960 m/s \\
-Stahl & 5941 m/s \\
+\rowcolor{white} Medium & v \\\\
+\rowcolor{lgray} Luft (20$^\circ$C) & 343 m/s \\
+\rowcolor{white} Helium (20$^\circ$C) & 999 m/s \\
+\rowcolor{lgray} Wasserstoff (20$^\circ$C) & 1330 m/s \\
+\rowcolor{white} flüssiges Helium (4K) & 211 m/s \\
+\rowcolor{lgray} Wasser (0$^\circ$C) & 1402 m/s \\
+\rowcolor{white} Wasser (20$^\circ$C) & 1482 m/s \\
+\rowcolor{lgray} Quecksilber (20$^\circ$C) & 1451 m/s \\
+\rowcolor{white} Aluminium & 6420 m/s \\
+\rowcolor{lgray} Blei & 1960 m/s \\
+\rowcolor{white} Stahl & 5941 m/s \\
 \end{tabular}
 
 \section{Energiefluss}
@@ -75,6 +71,11 @@ Stahl & 5941 m/s \\
 \[ \boxed{\hat{p} = \rho \omega v A} \qquad \text{Schalldruck} \]
 \[ \boxed{P_{Schall} = \frac{1}{2} \rho S v \omega^2 A^2 
 = \frac{1}{2} \frac{S}{\rho v} \hat{p}^2} \]
+
+\section{Reflektion / Transmission}
+\[ \boxed{P_{in} = P_r + P_t} \]
+\[ \boxed{A_{in} + A_r = A_t} \]
+\[ \boxed{\frac{P_2}{P_1} = \left(\frac{A_2}{A_1}\right)^2} \]
 
 \section{Intensität einer Welle}
 \subsection{Ebene Welle oder gerichteter Strahl}
@@ -91,6 +92,7 @@ Stahl & 5941 m/s \\
 \section{Schallpegel}
 \[ \boxed{L = 10 \cdot \log\left(\frac{I}{I_0}\right)} 
 \qquad I_0 = 10^{-12} \frac{W}{m^2} \text{(Hörschwelle)} \]
+\[ \boxed{I = I_0 \cdot 10^{\frac{L_2 - L_1}{10}}} \]
 
 \section{Dopplereffekt}
 Bewegter Sender: 
@@ -103,23 +105,33 @@ $+$, wenn e sich auf Quelle zu bewegt. }\\\\\text{
 $+$, wenn s sich vom Empfänger weg bewegt. }} \]
 
 \subsection{Machscher Kegel}
-\[ \boxed{\sin(\theta) = \frac{v t}{v_S t} = \frac{v}{V_s} = \frac{1}{Ma}} \]
+\[ \boxed{\sin(\theta) = \frac{v}{v_s} = \frac{1}{Ma}} \]
+\begin{tabular}{l@{}l}
+$\theta$:   & Halber Öffnunswinkel des Kegels \\
+$v$:        & Schallgeschwindigkeit \\
+$v_s$:      & Geschwindigkeit des Senders
+\end{tabular}
+
+\subsection{Superposition}
+Konstruktiv: 
+\[ \boxed{A = A_1 + A_2} \]
+\[ \boxed{P = \left(\sqrt{P_1} + \sqrt{P_2}\right)^2} \]
+Destruktiv: 
+\[ \boxed{A = A_1 - A_2} \]
+\[ \boxed{P = \left(\sqrt{P_1} - \sqrt{P_2}\right)^2} \]
 
 \section{Schwebung}
-\[ \boxed{2 \pi \cdot f_B = |\omega_1 - \omega_2|} \]
+Resultierende Welle
 \[ \boxed{2 \pi \cdot f_{av} = \frac{\omega_1 + \omega_2}{2}} \]
-
-\section{Reflektion}
-\[ \boxed{P_{in} = R_r + P_t} \]
-\[ \boxed{A_{in} + A_r = A_t} \]
-Achtung Vorzeichen!
+Umhüllkurve
+\[ \boxed{2 \pi \cdot f_B = |\omega_1 - \omega_2|} \]
 
 \section{Stehende Welle}
-\[ \boxed{f_{ges}(x,t) = 2 \cdot A \cdot \cos(k x) \cdot \cos(\omega t)} \]
+\[ \boxed{f_{ges}(x,t) = 2 \cdot A \cdot \sin(k x) \cdot \sin(\omega t)} \]
 $A$: Amplitude der eingehenden Sinusfunktion \\
 
 \subsection{Harmonische}
-\begin{tabular}{lllll}
+\begin{tabular}{@{}lllll}
 \rowcolor{white} $n$ & $\lambda$       & \#Bäuche & \#Knoten & Mitte \\
 \rowcolor{lgray} $1$ & $\frac{2 L}{1}$ & $1$      & $0$      & Bauch \\
 \rowcolor{white} $2$ & $\frac{2 L}{2}$ & $2$      & $1$      & Knoten \\
@@ -129,7 +141,8 @@ $A$: Amplitude der eingehenden Sinusfunktion \\
 \end{tabular}
 % \subsection{n-te Harmonische}
 \[ \lambda_n = \frac{2 L}{n} \qquad f_n = \frac{v}{\lambda_n} 
-= n \frac{v}{2 L} = n \cdot f_1 \qquad \text{$f_1$: Grundschwingung oder 1. Harmonische}\]
+= n \frac{v}{2 L} = n \cdot f_1 \qquad 
+\text{$f_1$: Grundschwingung oder 1. Harmonische}\]
 \#Bäuche: $n$ \\
 \#Knoten: $n - 1$ \\
 Mitte: \\
@@ -139,7 +152,7 @@ $n$ ungerade: Bauch
 = A \sin\left(\frac{2 \pi}{\lambda_n} x\right) \cdot \sin(2 \pi f_u t) \]
 
 \subsection{Spezialfall Orgelpfeife}
-\begin{tabular}{llll}
+\begin{tabular}{@{}llll}
 \rowcolor{white} $n$ & $\lambda_n$     & \#Bäuche & \#Knoten  \\
 \rowcolor{lgray} $1$ & $\frac{4 L}{1}$ & $1$      & $0$       \\
 \rowcolor{white} $3$ & $\frac{4 L}{3}$ & $2$      & $1$       \\
@@ -147,6 +160,28 @@ $n$ ungerade: Bauch
 \rowcolor{white} $7$ & $\frac{4 L}{7}$ & $4$      & $3$       \\
 \rowcolor{lgray} $9$ & $\frac{4 L}{9}$ & $5$      & $4$       \\
 \end{tabular}
+
+\subsection{Knoten und Bäuche finden}
+\[ \begin{array}{@{}llll}
+\text{Bäuche:} \\
+\sin(k x + \phi) = 1 
+    & \rightarrow 
+    & k x + \phi = n \cdot \pi + \frac{\pi}{2} 
+    & , n \in \mathbb{Z} \\
+\cos(k x + \phi) = 1 
+    & \rightarrow 
+    & k x + \phi = n \cdot \pi                 
+    & , n \in \mathbb{Z} \\\\
+\text{Knoten:} \\
+\sin(k x + \phi) = 0 
+    & \rightarrow 
+    & k x + \phi = n \cdot \pi                 
+    & , n \in \mathbb{Z} \\
+\cos(k x + \phi) = 0 
+    & \rightarrow 
+    & k x + \phi = n \cdot \pi + \frac{\pi}{2} 
+    & , n \in \mathbb{Z} \\
+\end{array} \]
 
 \section{Wasserwelle}
 Tiefwasserwelle

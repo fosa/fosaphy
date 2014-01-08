@@ -16,28 +16,39 @@
 %----------------------------------------
 
 \chapter{Schwingung}
-\section{Einfache harmonische Schwingung}
-Rücktreibende Kraft: 
-\[ \boxed{F = - k \cdot x} \]
+\section{Begriffe}
 \begin{tabular}{ll}
-$F:$ & Rücktreibende Kraft \\
-$k:$ & Federkonstante \\
-$x:$ & Auslenkung
+$\omega:$       & Kreisfrequenz \\
+$f:$            & Frequenz \\
+$T:$            & Periodendauer \\
+$A:$            & Amplitude \\
+$\phi:$         & Phasenverschiebung \\
+$x:$            & Auslenkung \\
+$\theta:$       & Auslenkwinkel \\
+$I:$            & Trägheitsmoment $[kg m^2]$ \\
+$k:$            & Federkonstante $[\frac{N}{m}]$ \\
+$\kappa:$       & Rotationsfederkonstante $[Nm]$ \\
+$d:$            & Abstand Massenschwerpunkt zu Drehachse \\
+$L:$            & Pendellänge \\
+$\ell:$         & Länge der Flüssigkeitssäule \\
+$\beta:$        & Abklingkonstante $[s^{-1}]$ \\
+$b:$            & Dämpfungskonstante $[\frac{kg}{s}]$ \\
+$\tau:$         & Zeitkonstante, Zerfallszeit $[s]$ \\
+$Q:$            & Güte \\
+$H:$            & Erregerauslenkung \\
+$\Omega_R:$     & Resonanzkreisfrequenz \\
+$\Delta\Omega:$ & Kurvenbreite, Bandbreite \\
 \end{tabular}
-\[ \boxed{F = m \cdot a(t) = m \cdot \frac{d^2}{d t^2}x(t) = m \cdot \ddot{x}} \]
-\[ \boxed{m \cdot \ddot{x} + k \cdot x = 0} \]
+
+\section{Einfache harmonische Schwingung}
+Differentialgleichung: 
+\[ \boxed{F = m \cdot \ddot{x} + k \cdot x = 0} \]
 \[ \boxed{x(t) = A \cdot \cos(\omega \cdot t + \phi)} \]
-\[ \boxed{\omega = 2 \cdot \pi \cdot f = \sqrt{\frac{k}{m}}} \]
-\[ \boxed{T = 2 \cdot \pi \sqrt{\frac{m}{k}}} \]
-\[ \boxed{\dot{x} = - A \cdot \omega \cdot \sin(\omega \cdot t + \phi)} \]
-\[ \boxed{\ddot{x} = - A \cdot \omega^2 \cdot \cos(\omega \cdot t + \phi)} \]
-\[ \boxed{m \cdot (-A \cdot \omega^2 \cdot \cos(\omega \cdot t + \phi)) 
-+ k \cdot A \cdot \cos(\omega \cdot t + \phi) \stackrel{!}{=} 0} \]
-\[ \boxed{A \cdot \cos(\omega \cdot t + \phi) \cdot (-m \cdot  \omega^2 + k) 
-\stackrel{!}{=} 0} \]
-\[ \boxed{-m \cdot  \omega^2 + k \stackrel{!}{=} 0} \]
-\[ \boxed{\omega^2 = \frac{k}{m}} \]
+\[ \boxed{\dot{x}(t) = - \omega A \cdot \sin(\omega \cdot t + \phi)} \]
+\[ \boxed{\ddot{x}(t) = - \omega^2 A \cdot \cos(\omega \cdot t + \phi)} \]
 \[ \boxed{\omega = \sqrt{\frac{k}{m}}} \]
+\[ \boxed{f = \frac{\sqrt{\dfrac{k}{m}}}{2 \pi}} \]
+\[ \boxed{T = 2 \cdot \pi \sqrt{\frac{m}{k}}} \]
 
 \subsection{Auslenkung und Geschwindigkeit als Anfangsbedingungen}
 \[ \boxed{x_0 = x(0) = A \cdot \cos(\phi)} \]
@@ -61,77 +72,89 @@ Evtl. mit $pi$ addieren.
 \[ \boxed{x(t) = - \frac{m \cdot g}{k} + A \cdot \cos(\omega \cdot t + \phi)} \]
 
 \subsection{Energie}
-\[ \boxed{E_{pot} = \frac{1}{2} \cdot k \cdot x(t)^2} \]
-\[ \boxed{E_{kin} = \frac{1}{2} \cdot m \cdot v(t)^2} \]
-\[ \boxed{E_{tot} = \frac{1}{2} \cdot m \cdot v^2 + \frac{1}{2} \cdot k \cdot x^2 
-= \frac{1}{2} \cdot k \cdot A^2 = \frac{1}{2} \cdot m \cdot \omega^2 \cdot A^2 
+\[ \boxed{E_{pot}(t) = \frac{1}{2} \cdot k \cdot x(t)^2} \]
+\[ \boxed{E_{kin}(t) = \frac{1}{2} \cdot m \cdot v(t)^2} \]
+\[ \boxed{E_{tot} = \frac{1}{2} \cdot k \cdot A^2 
+= \frac{1}{2} \cdot m \cdot \omega^2 \cdot A^2 
 = \frac{1}{2} \cdot m \cdot (v_{max})^2} \]
 
 \section{Rotationsschwingung}
+Differentialgleichung: 
+\[ \boxed{M = I_s \cdot \ddot{\theta} + \kappa \cdot \theta} \]
+\[ \boxed{\theta(t) = \theta_{max} \cdot \cos(\omega \cdot t + \phi)} \]
+für kleine Winkel: 
+\[ \boxed{\kappa = k_1 \cdot {r_1}^2 + k_2 \cdot {r_2}^2 + \dots } \qquad 
+\text{$r$: Abstand Feder zu Drehpunkt} \]
+\[ \boxed{\kappa = \sum_{1}^{n} \left(k_n \cdot {r_n}^2\right)} \]
 \[ \boxed{\omega = \sqrt{\frac{\kappa}{I}}} \]
-\[ \boxed{\Theta(t) = \Theta_0 \cdot \cos(\omega \cdot t + \phi)} \]
+\[ \boxed{f = \frac{\sqrt{\dfrac{\kappa}{I}}}{2 \pi}} \]
 \[ \boxed{T = 2 \cdot \pi \cdot \sqrt{\frac{I}{\kappa}}} \]
 
-\subsection{Stab am Ende aufgehängt}
-\[ \boxed{I = \frac{1}{12} \cdot m \cdot L^2} \]
-\[ \boxed{M = -F \cdot r \cdot \sin(\angle) = -k \cdot \Delta x \cdot \frac{L}{2}} \]
-\[ \boxed{M = -k \left(\frac{L}{2}\right)^2 \cdot \Theta} \]
-Für kleine Winkel: 
-\[ \boxed{\kappa = k \cdot \left(\frac{L}{2}\right)^2} \]
-\[ \boxed{I = \frac{1}{12} \cdot m \cdot L^2} \]
-\[ \boxed{\omega = \sqrt{\frac{\kappa}{I}} 
-= \sqrt{\frac{k \cdot \left(\frac{L}{2}\right)^2}{\frac{1}{12}\cdot m \cdot L^2}} 
-= \sqrt{\frac{3 \cdot k}{m}}} \]
-
 \section{Physikalisches Pendel}
-\[ \boxed{M = -d \cdot m \cdot g \cdot \sin(\Theta) 
-\cong - \underbrace{d \cdot m \cdot g}_{\kappa} \cdot \Theta} \]
-\[ \boxed{\omega = \sqrt{\frac{\kappa}{I}} 
+Differentialgleichung: 
+\[ \boxed{M = I_z \cdot \ddot{\theta} + d \cdot m \cdot g \cdot \sin(\theta)} \]
+für kleine Winkel: 
+\[ \boxed{M = I_z \cdot \ddot{\theta} + d \cdot m \cdot g \cdot \theta} \]
+\[ \boxed{\kappa = d \cdot m \cdot g} \qquad 
+\text{Ist der Schwerpunkt über dem Drehpunkt, ist $\kappa$ negativ} \]
+\[ \boxed{\kappa_{tot} = \kappa_1 + \kappa_2 \dots} \]
+\[ \boxed{\kappa_{tot} = \sum_{1}^{n} \left(d_n \cdot m_n \cdot g\right) } \]
+\[ \boxed{\omega = \sqrt{\frac{\kappa}{I_z}} 
 = \sqrt{\frac{m \cdot g \cdot d}{I_z}}} \]
-\[ \boxed{T = 2 \cdot \pi \cdot \sqrt{\frac{I}{m \cdot g \cdot d}}} \]
+\[ \boxed{f = \frac{\sqrt{\frac{\kappa}{I_z}}}{2 \pi}
+= \frac{\sqrt{\frac{m \cdot g \cdot d}{I_z}}}{2 \pi}} \]
+\[ \boxed{T = 2 \cdot \pi \cdot \sqrt{\frac{I_z}{m \cdot g \cdot d}}} \]
 speziell: Fadenpendel
 \[ \boxed{I = m \cdot L^2} \]
 \[ \boxed{\kappa = m \cdot g \cdot L} \]
-\[ \boxed{2 \cdot \pi \cdot f = \sqrt{\frac{m \cdot g \cdot L}{m \cdot L^2}}} \]
-\[ \boxed{f = \frac{1}{2 \cdot \pi} \cdot \sqrt{\frac{g}{L}}} \]
 \[ \boxed{\omega = \sqrt{\frac{g}{L}}} \]
+\[ \boxed{f = \frac{\sqrt{\frac{g}{L}}}{2 \cdot \pi}} \]
 \[ \boxed{T = 2 \cdot \pi \cdot \sqrt{\frac{L}{g}}} \]
 Fadenkraft: 
-\[ \boxed{F_s = m \cdot g \cdot \cos(\theta) + m \cdot \frac{v^2}{L}} \]
+\[ \boxed{F_s = m \cdot g \cdot \cos(\theta) + m \cdot \frac{v^2}{L} 
+= m \cdot g \cdot \cos(\theta) + m \cdot \omega^2 \cdot L} \]
 
 \section{Pendelnde Flüssigkeitssäule}
-\[ \boxed{\omega = \sqrt{\frac{2 \cdot g}{L}}} \]
+\[ \boxed{\omega = \sqrt{\frac{2 \cdot g}{\ell}}} \]
+\[ \boxed{f = \frac{\sqrt{\frac{2 \cdot g}{\ell}}}{2 \pi}} \]
+\[ \boxed{T = 2 \pi \sqrt{\frac{\ell}{2 \cdot g}}} \]
 
 \section{Gedämpfte Schwingung}
+Differentialgleichung: 
+\[ \boxed{F = m \cdot \ddot{x} + \underbrace{b \cdot \dot{x}}_
+{\text{Dämpfung}} + m \cdot x = 0} \]
+\[ \boxed{F_{\text{Dämpfung}} = F_{\text{Stokes}} 
+= 6 \pi \cdot \eta \cdot R \cdot v} \]
+\[ \boxed{\rightarrow b = 6 \pi \cdot \eta \cdot R} \]
+\[ \boxed{\omega = \sqrt{\frac{k}{m}}} \]
+\[ \boxed{\beta = \frac{b}{2 m}} \]
 Fall 1: $\beta > \omega$ "'Kriechfall"'
 \[ \boxed{x(t) \sim e^{(-\beta \pm \delta)t}} \]
-Fall 2: $\omega = \beta$ "'kritische Dämpfung"'
-\[ \boxed{\beta = \frac{b}{2 m} \quad \Leftrightarrow \quad 
-b = b_{krit} = \sqrt{4 \cdot k \cdot m}} \]
-Fall 3: $\omega > \beta$ "'Gedämpfte Schwingung"'
-\[ \boxed{x(t) = A \cdot e^{-\beta t} \cdot \cos(\omega_d t)} \]
+Fall 2: $\beta = \omega$ "'kritische Dämpfung"'
+\[ \boxed{b = b_{krit} = \sqrt{4 \cdot k \cdot m}} \]
+Fall 3: $\beta < \omega$ "'Gedämpfte Schwingung"'
+\[ \boxed{x(t) = A \cdot e^{-\beta t} \cdot \cos(\omega_d \cdot t)} \]
 \[ \boxed{\omega_d = \sqrt{\omega^2 - \beta^2} 
 = \sqrt{\frac{k}{m} - \left({\frac{b}{2 \cdot m}}\right)^2}} \]
 Zerfallszeit: 
 \[ \boxed{\tau = \frac{1}{\beta}} \]
 \[ \boxed{A(t) = A \cdot e^{-\beta t} = A \cdot e^{-\frac{t}{\tau}}} \]
 Bei der Zeit $t = \tau$
-\[ \boxed{A(\tau) = \frac{A}{e} = A \cdot e^{-1} \approx 0.37 A} \]
+\[ \boxed{A(\tau) = \frac{A_0}{e} = A_0 \cdot e^{-1} \approx 0.37 \cdot A_0} \]
 Abklingkonstante: 
 \[ \boxed{\beta 
-= \frac{1}{t_2 - t_1} \cdot \ln\left(\frac{x(t_1)}{x(t_2)}\right)} \]
+= \frac{\ln\left(\frac{x(t_1)}{x(t_2)}\right)}{t_2 - t_1}} \]
 Schwingungsenergie: 
 \[ \boxed{E(t) = \frac{m}{2} \cdot \dot{x}^2(t) + \frac{k}{2} \cdot x^2(t)} \]
-\[ \boxed{\frac{d E(t)}{dt} 
-= \frac{m}{2} \cdot 2 \cdot \dot{x}^2(t) \cdot \ddot{x}^2(t) 
-+ \frac{k}{2} \cdot 2 \cdot x^2(t) \cdot \dot{x}^2(t) 
-= \underbrace{(m \ddot{x}(t) + k x(t))}_{-b \dot{x}(t)} \cdot \dot{x}(t)} \]
-\[ \boxed{\frac{d E(t)}{dt} = -b \dot{x}^2 - b v^2(t) \leq 0} \]
-\[ \boxed{A(t) = A \cdot e^{-\frac{t}{\tau}}} \]
-\[ \boxed{E(t) = E_0 \cdot e^{-\frac{2 \cdot t}{\tau}}} \]
+Mittlere Energie: 
+\[ \boxed{\langle E(t)\rangle = E_0 \cdot e^{-\frac{2 \cdot t}{\tau}}} \]
 Güte: 
-\[ \boxed{Q = \frac{\pi}{\beta \cdot T_d} = \pi \cdot \frac{\tau}{T_d} 
-= \frac{\omega_d \cdot \tau}{2}} \]
+\[ \begin{array}{l}
+\boxed{Q = \frac{2 \pi \cdot E(t)}{|\Delta E(t)|} 
+= \frac{\pi}{\beta \cdot T_d} = \frac{\pi \cdot \tau}{T_d} 
+= \frac{\omega_d \cdot \tau}{2}} \\
+\text{$\Delta E(t)$: Energieverlust pro Periode}
+\end{array} \]
 
 \section{Erzwungene Schwingung}
 \[ \boxed{x(t) = A(\Omega) \cdot \cos(\Omega t - \varphi(\Omega))} \]
@@ -139,12 +162,13 @@ Güte:
 \sqrt{(\omega^2 - \Omega^2)^2 + (2 \cdot \Omega \cdot \beta)^2}} 
 \approx \frac{H}{\sqrt{\left(1 - \left(\frac{\Omega}{\omega}\right)^2\right)^2 
 + \left(\frac{\Omega}{Q \cdot \omega}\right)^2}}} \]  
+\[ F_0\text{: Anregungskraft} \qquad H\text{: Anregungsamplitude} \]
 \[ \boxed{\varphi(\Omega) = \arctan\left(\frac{2 \cdot \Omega \cdot \beta}
-{{\omega_0}^2 - \Omega^2}\right) 
+{{\omega}^2 - \Omega^2}\right) 
 = \arctan{\left(\frac{\frac{b}{\sqrt{k \cdot m}} 
 \left(\frac{\Omega}{\omega}\right)}
 {1 - \left(\frac{\Omega}{\omega}\right)^2}\right)}} \]
-\[ \boxed{H = \frac{F}{k}} \]
+\[ \boxed{H = \frac{F_0}{k}} \]
 \[ \boxed{\omega = \sqrt{\frac{k}{m}}} \]
 \[ \boxed{\beta = \frac{b}{2 m} = \frac{1}{\tau}} \]
 \[ \boxed{Q = \frac{\omega_d}{2\beta} = \omega_d \frac{m}{b} 
@@ -153,7 +177,6 @@ schwache Dämpfung:
 \[ \boxed{b << b_{krit} = \sqrt{4 k \cdot m} \quad Q >> 1} \]
 
 \subsection{Resonanzfrequenz}
-\[ \boxed{\frac{d A(\Omega)}{d\Omega} = 0} \]
 \[ \boxed{\Omega_R = \sqrt{\omega^2 - 2\beta^2} \neq \omega_d 
 = \sqrt{\omega^2 - \beta^2} \neq \omega} \]
 \[ \boxed{A(\Omega_R) = \frac{\omega^2 H}{2 \beta \sqrt{\omega^2 - \beta^2}} 
@@ -164,6 +187,6 @@ schwache Dämpfung:
 \approx \arctan\left(\sqrt{4 Q^2 - 2}\right) \approx \frac{\pi}{2}} \]
 Für $Q>5$
 \[ \boxed{\Omega_R \approx \omega \left(1 - \frac{1}{4Q^2}\right)} \]
-\[ \boxed{A_R = A(\Omega_R) \approx \frac{Q H}{\sqrt{1 - \frac{1}{2Q^2}}}} \]
-\[ \boxed{\Delta\Omega \approx \frac{\omega}{Q}} \]
-
+\[ \boxed{A_R = A(\Omega_R) \approx \frac{Q H}{\sqrt{1 - \frac{1}{2Q^2}}} 
+\approx Q \cdot H} \]
+\[ \boxed{Q \approx \frac{\Omega_R}{\Delta\Omega}} \]

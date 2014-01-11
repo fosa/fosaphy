@@ -20,6 +20,8 @@
 \usepackage{textcomp} %Erweiterung von fontenc
 \usepackage{lmodern} %Erweiterung des Zeichensatzes
 
+\usepackage[toc,page]{appendix}
+
 \usepackage{graphics}
 \usepackage{graphicx}
 \usepackage[ngerman]{babel}
@@ -129,3 +131,6 @@
 \fancyfoot[RO]{\thepage}
 \fancyfoot[LE]{\thepage}
 \renewcommand{\footrulewidth}{0.4pt} %untere Trennlinie
+
+\addto\captionsngerman{\let\appendixtocname\appendixname%
+\let\appendixpagename\appendixname}

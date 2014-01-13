@@ -113,7 +113,7 @@ Drehmoment.
 \end{figure}
 
 \noindent
-Die Grafik \ref{fig:drehmoment} zeigt ein einfaches Besispiel der
+Die Grafik \ref{fig:drehmoment} zeigt ein einfaches Beispiel der
 komponentenweisen Betrachtung von Kräften. Im Beispiel bewirkt lediglich
 die Komponente $\vec{F}_y$ ein Drehmoment, denn $\vec{F}_x$ wirkt auf
 die Drehachse und erzeugt somit kein Drehmoment.
@@ -196,7 +196,7 @@ sind es die Drehmomente in der Rotation.
 \[ \boxed{
 	\sum \vec{M}_{extern} = 0 
 	\quad \Rightarrow \quad 
-	\vec{L} = kosntant
+	\vec{L} = konstant
 } \]
 
 \section{Trägheitsmoment}\label{sec:traegheitsmoment}
@@ -239,8 +239,8 @@ Kreisring, dünn &
 	\includegraphics[scale=\traegscale]{traeg-kreisring-duenn.pdf}
 	\end{minipage} &
 		\begin{itemize}
-		\item[x] $m \cdot r^2$
-		\item[y] $\frac{m}{2} \cdot r^2$
+		\item[x:] $m \cdot r^2$
+		\item[y:] $\frac{m}{2} \cdot r^2$
 		\end{itemize} \\
 Kreisring &
 	\begin{minipage}{0.3\textwidth}
@@ -248,7 +248,7 @@ Kreisring &
 	\includegraphics[scale=\traegscale]{traeg-kreisring.pdf}
 	\end{minipage} &
 		\begin{itemize}
-			\item[x] $m \cdot \left({r_1}^2 + \frac{3}{4}
+			\item[x:] $m \cdot \left({r_1}^2 + \frac{3}{4}
 				\cdot {r_2}^2\right)$
 		\end{itemize} \\
 Kreisbogen &
@@ -257,11 +257,11 @@ Kreisbogen &
 	\includegraphics[scale=\traegscale]{traeg-kreisbogen.pdf}
 	\end{minipage} &
 		\begin{itemize}
-		\item[x] $\frac{m}{r^2} 
+		\item[x:] $\frac{m}{2}r^2 
 			\left(1-\frac{sin(\alpha)}{\alpha} \right)$
-		\item[y]  $\frac{m}{r^2} 
+		\item[y:]  $\frac{m}{2}r^2 
 			\left(1+\frac{sin(\alpha)}{\alpha} \right)$
-		\item[z] $mr^2$
+		\item[z:] $mr^2$
 		\end{itemize} \\
 Kreissektor &
 	\begin{minipage}{0.3\textwidth}
@@ -269,9 +269,9 @@ Kreissektor &
 	\includegraphics[scale=\traegscale]{traeg-kreissektor.pdf}
 	\end{minipage} &
 		\begin{itemize}
-		\item[x] $\frac{m}{4} r^2  
+		\item[x:] $\frac{m}{4} r^2  
 			\left(1-\frac{sin(\alpha)}{\alpha} \right)$
-		\item[y]  $\frac{m}{4} r^2 
+		\item[y:]  $\frac{m}{4} r^2 
 			\left(1+\frac{sin(\alpha)}{\alpha} \right)$
 		\item[z] $\frac{m}{2} r^2$	
 		\end{itemize} \\
@@ -281,8 +281,8 @@ Kreisscheibe, dünn &
 	\includegraphics[scale=\traegscale]{traeg-kreisscheibe-duenn.pdf}
 	\end{minipage} &
 		\begin{itemize}
-		\item[x] $\frac{m}{2} r^2$
-		\item[y] $\frac{m}{4} r^2$
+		\item[x:] $\frac{m}{2} r^2$
+		\item[y:] $\frac{m}{4} r^2$
 		\end{itemize} \\
 Kugel, solid & \multirow{2}{*}{
 	\begin{minipage}{0.3\textwidth}
@@ -291,11 +291,11 @@ Kugel, solid & \multirow{2}{*}{
 	\end{minipage}}
 		&
 		\begin{itemize}
-			\item[x] $\frac{2}{5} mr^2$
+			\item[x:] $\frac{2}{5} mr^2$
 		\end{itemize} \\
 Kugel, dünnwandig & &
 		\begin{itemize}
-			\item[x] $\frac{2}{3} mr^2$
+			\item[x:] $\frac{2}{3} mr^2$
 		\end{itemize}
 \end{tabular}
 \end{table}
@@ -313,8 +313,8 @@ Stab &
 	\includegraphics[scale=\traegscale]{traeg-stab.pdf}
 	\end{minipage} &
 		\begin{itemize}
-		\item[y] $\frac{m}{12} l^2$
-		\item[y'] $\frac{1}{3} m l^2$
+		\item[y:] $\frac{m}{12} l^2$
+		\item[y':] $\frac{1}{3} m l^2$
 		\end{itemize} \\
 & & \\
 Vollzylinder &
@@ -323,8 +323,8 @@ Vollzylinder &
 	\includegraphics[scale=\traegscale]{traeg-vollzylinder.pdf}
 	\end{minipage} &
 		\begin{itemize}
-		\item[x] $\frac{m}{2} r^2$
-		\item[y] $\frac{m}{12} \left( 3r^2 + h^2 \right)$
+		\item[x:] $\frac{m}{2} r^2$
+		\item[y:] $\frac{m}{12} \left( 3r^2 + h^2 \right)$
 		\end{itemize} \\
 & & \\
 Hohlzylinder, dünnwandig &
@@ -333,8 +333,8 @@ Hohlzylinder, dünnwandig &
 	\includegraphics[scale=\traegscale]{traeg-hohlzylinder-duenn.pdf}
 	\end{minipage} &
 		\begin{itemize}
-		\item[x] $mr^2$
-		\item[y] $\frac{m}{4} (2r^2 + \frac{h^2}{3})$
+		\item[x:] $mr^2$
+		\item[y:] $\frac{m}{4} (2r^2 + \frac{h^2}{3})$
 		\end{itemize} \\
 & & \\
 Hohlzylinder &
@@ -343,8 +343,8 @@ Hohlzylinder &
 	\includegraphics[scale=\traegscale]{traeg-hohlzylinder.pdf}
 	\end{minipage} &
 		\begin{itemize}
-		\item[x] $\frac{m}{2} \left({r_1}^2 + {r_2}^2 \right)$
-		\item[y] $\frac{m}{4} \left({r_1}^2 + {r_2}^2 
+		\item[x:] $\frac{m}{2} \left({r_1}^2 + {r_2}^2 \right)$
+		\item[y:] $\frac{m}{4} \left({r_1}^2 + {r_2}^2 
 			+ \frac{h^2}{3} \right)$
 		\end{itemize}\\
 Quader &
@@ -353,17 +353,17 @@ Quader &
 	\includegraphics[scale=\traegscale]{traeg-quader.pdf}
 	\end{minipage} &
 		\begin{itemize}
-		\item[x] $\frac{m}{12} \left(b^2 + c^2\right)$
-		\item[y] $\frac{m}{12} \left(a^2 + c^2\right)$
-		\item[z] $\frac{m}{12} \left(a^2 + b^2\right)$
+		\item[x:] $\frac{m}{12} \left(b^2 + c^2\right)$
+		\item[y:] $\frac{m}{12} \left(a^2 + c^2\right)$
+		\item[z:] $\frac{m}{12} \left(a^2 + b^2\right)$
 		\end{itemize} \\
 Platte, dünn &
 	\begin{minipage}{0.3\textwidth}
 	\includegraphics[scale=\traegscale]{traeg-platte.pdf}
 	\end{minipage} &
 		\begin{itemize}
-		\item[z] $\frac{m}{12} a^2$
-		\item[z'] $\frac{1}{3} ma^2$
+		\item[z:] $\frac{m}{12} a^2$
+		\item[z':] $\frac{1}{3} ma^2$
 		\end{itemize} \\
 \end{tabular}
 \end{table}

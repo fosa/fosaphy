@@ -40,15 +40,19 @@ $\Omega_R:$     & Resonanzkreisfrequenz \\
 $\Delta\Omega:$ & Kurvenbreite, Bandbreite \\
 \end{tabular}
 
-\section{Einfache harmonische Schwingung}
+%\section{Einfache harmonische Schwingung}
+\input{einfache-harmonische}
+
+\begin{comment}
 Differentialgleichung: 
 \[ \boxed{F = m \cdot \ddot{x} + k \cdot x = 0} \]
 \[ \boxed{x(t) = A \cdot \cos(\omega \cdot t + \phi)} \]
 \[ \boxed{\dot{x}(t) = - \omega A \cdot \sin(\omega \cdot t + \phi)} \]
 \[ \boxed{\ddot{x}(t) = - \omega^2 A \cdot \cos(\omega \cdot t + \phi)} \]
-\[ \boxed{\omega = \sqrt{\frac{k}{m}}} \]
-\[ \boxed{f = \frac{\sqrt{\dfrac{k}{m}}}{2 \pi}} \]
-\[ \boxed{T = 2 \cdot \pi \sqrt{\frac{m}{k}}} \]
+\[ \boxed{\omega = \sqrt{\frac{k}{m}} = 2 \pi f} \]
+\[ \boxed{f = \frac{\sqrt{\dfrac{k}{m}}}{2 \pi} = \frac{\omega}{2 \pi} } \]
+\[ \boxed{T = 2 \cdot \pi \sqrt{\frac{m}{k}} = \frac{1}{f} } \]
+\end{comment}
 
 \subsection{Auslenkung und Geschwindigkeit als Anfangsbedingungen}
 \[ \boxed{x_0 = x(0) = A \cdot \cos(\phi)} \]
@@ -59,8 +63,9 @@ Evtl. mit $\pi$ addieren.
 \[ \boxed{A = \sqrt{{x_0}^2 + \left(\frac{v_0}{\omega}\right)^2}} \]
 
 \subsection{Geschwindigkeit und Beschleunigung aus Amplitude und Position}
-\[ \boxed{v(t) = \sqrt{\frac{k}{m}} \cdot \sqrt{A^2 - x^2(t)}} \]
-\[ \boxed{a(t) = - \frac{k}{m} \cdot x(t)} \]
+\[ \boxed{v(t) = \sqrt{\frac{k}{m}} \cdot \sqrt{A^2 - x^2(t)}
+	= \omega \sqrt{A^2 - x^2(t)}} \]
+\[ \boxed{a(t) = - \frac{k}{m} \cdot x(t) - \omega^2 x(t)} \]
 
 \subsection{Maximale Geschwindigkeit und Beschleunigung}
 \[ \boxed{v_{max} = \omega \cdot A} \]
@@ -93,7 +98,7 @@ für kleine Winkel:
 \section{Physikalisches Pendel}
 Differentialgleichung: 
 \[ \boxed{M = I_z \cdot \ddot{\theta} + d \cdot m \cdot g \cdot \sin(\theta) = 0} \]
-für kleine Winkel: 
+für kleine Winkel $\theta$ gilt $\sin(\theta) \approx \theta$: 
 \[ \boxed{M = I_z \cdot \ddot{\theta} + d \cdot m \cdot g \cdot \theta = 0} \]
 \[ \boxed{\kappa = d \cdot m \cdot g} \qquad 
 \text{Ist der Schwerpunkt über dem Drehpunkt, ist $\kappa$ negativ} \]
@@ -138,7 +143,7 @@ Fall 3: $\beta < \omega$ "'Gedämpfte Schwingung"'
 = \sqrt{\frac{k}{m} - \left({\frac{b}{2 \cdot m}}\right)^2}} \]
 Zerfallszeit: 
 \[ \boxed{\tau = \frac{1}{\beta}} \]
-\[ \boxed{A(t) = A \cdot e^{-\beta t} = A \cdot e^{-\frac{t}{\tau}}} \]
+\[ \boxed{A(t) = A_0 \cdot e^{-\beta t} = A_0 \cdot e^{-\frac{t}{\tau}}} \]
 Bei der Zeit $t = \tau$
 \[ \boxed{A(\tau) = \frac{A_0}{e} = A_0 \cdot e^{-1} \approx 0.37 \cdot A_0} \]
 Abklingkonstante: 

@@ -1,0 +1,45 @@
+\section{Maxwell-Boltzmann Verteilung}
+
+\begin{figure}[h!]
+	\centering
+	\begin{tikzpicture}[domain=0:4]
+		\draw[->] (0,0) -- (4.5,0) node[below] 
+			{$\vec{v}\,\left[\frac{m}{s}\right]$};
+		\draw[->] (0,0) -- (0,2.5) node[left] 
+			{$p(\vec{v})\,\left[\frac{s}{m}\right]$};
+
+		\draw[color=red, samples=200, thick] plot[id=l] 
+			function{1*(x*x)*exp(-0.5*x*x)};
+		\draw[color=green, samples=200, thick] plot[id=m] 
+			function{3*(x*x)*exp(-1*x*x)};
+		\draw[color=blue, samples=200, thick] plot[id=h] 
+			function{10*(x*x)*exp(-2*x*x)};
+
+		\draw[color=red] (3,2) node[right] {Heiss};
+		\draw[color=green] (3,1.5) node[right] {Warm};
+		\draw[color=blue] (3,1) node[right] {Kalt};
+	\end{tikzpicture}
+\end{figure}
+
+
+\[ \boxed{f(v) = 4 \pi \left(\frac{m_{mol}}{2 \pi \cdot R \cdot T}\right)
+^{\frac{3}{2}} \cdot v^2 \cdot e^{-\left(\frac{m_{mol} \cdot v^2}
+{2 \cdot R \cdot T}\right)}} \]
+\[ \boxed{f(v) = 4 \pi \left(\frac{m_{kül}}{2 \pi \cdot k_B \cdot T}\right)
+^{\frac{3}{2}} \cdot v^2 \cdot e^{-\left(\frac{m_{kül} \cdot v^2}
+{2 \cdot k_B \cdot T}\right)}} \]
+Wahrscheinlichkeit:
+\[ \boxed{P(v_1, v_2) = \int\limits_{v_1}^{v_2} f(v) ~ dv} \]
+
+\section{Charakteristische Geschwindigkeiten}
+Wahrscheinlichste Geschwindigkeit
+\[ \boxed{v_w = \sqrt{\frac{2 \cdot k_B \cdot T}{m_{kül}}} 
+= \sqrt{\frac{2 \cdot R \cdot T}{m_{mol}}}} \]
+Durchschnittsgeschwindigkeit
+\[ \boxed{v_{av} = \langle v \rangle 
+= \sqrt{\frac{8 \cdot k_B \cdot T}{\pi \cdot m_{kül}}} 
+= \sqrt{\frac{8 \cdot R \cdot T}{\pi \cdot m_{mol}}}} \]
+Root Mean Square Geschwindigkeit
+\[ \boxed{v_{rms} = \sqrt{\langle v^2 \rangle} 
+= \sqrt{\frac{3 \cdot k_B \cdot T}{m_{kül}}} 
+= \sqrt{\frac{3 \cdot R \cdot T}{m_{mol}}}} \]

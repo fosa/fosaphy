@@ -10,6 +10,7 @@ ursprünglichen Differentialgleichung.
 } \]
 
 
+
 \[ \boxed{F_{\text{Dämpfung}} = F_{\text{Stokes}} 
 = 6 \pi \cdot \eta \cdot R \cdot v} \]
 \[ \boxed{\rightarrow b = 6 \pi \cdot \eta \cdot R} \]
@@ -83,8 +84,41 @@ $\beta$ beschrieben werden.
 } \]
 Für die Praxis ergibt sich ein einfacher Zusmmenhang aus der $e$-Funktion,
 denn diese definiert, dass pro verstrichenes $\tau$ die Amplitude um ca.
-63\% gesunken ist. D.h. für $A(t=\tau) \approx A_0 \cdot 0.37$
+63\% gesunken ist. D.h. für $A(t=\tau) \approx A_0 \cdot 0.37$. Somit kann
+das Abklingen nach $5\tau$ als abgeschlossen betrachtet werden.
 
+\begin{figure}[h!]
+	\centering
+	\begin{tikzpicture}[domain=0:5]
+		\draw[->] (0,0) -- (6,0) node[below] {$t$};
+		\draw[->] (0,0) -- (0,2.5) node[left] {$A,\,E$};
+
+		\draw[color=red, samples=200, thick] plot[id=a] function{2*exp(-1*x)};
+		\draw[color=blue, samples=200, thick] plot[id=p] function{2*exp(-2*x)};
+
+		\draw[color=red] (5,2.5) node[right] {$A(t)$};
+		\draw[color=blue] (5,2) node[right] {$\langle E(t) \rangle$};
+	
+		\draw[] (0.1,2) -- (-0.1,2) node[left] {$A_0$};
+		\draw[] (1,0.72) circle (1pt);
+		\draw[dotted] (0,0.74) -- (1,0.74); 
+		\draw[dotted] (1,0) -- (1,0.74);
+
+		\draw[] (0.5,0.74) circle (1pt);
+		\draw[dotted] (0.5,0) -- (0.5,0.74);
+
+		\draw[] (0.1,0.74) -- (-0.1,0.74) node[left] {$\approx 0.37 \cdot A_0$};
+
+		\draw[] (0.5,0.1) -- (0.5,-0.1) node[below] {$\frac{\tau}{2}$};
+		\draw[] (1,0.1) -- (1,-0.1) node[below] {$\tau$};
+		\draw[] (2,0.1) -- (2,-0.1) node[below] {$2\tau$};
+		\draw[] (3,0.1) -- (3,-0.1) node[below] {$3\tau$};
+		\draw[] (4,0.1) -- (4,-0.1) node[below] {$4\tau$};
+		\draw[] (5,0.1) -- (5,-0.1) node[below] {$5\tau$};
+	\end{tikzpicture}
+	\caption{Abklingen einer Schwingung}
+	\label{fig:abklingen}
+\end{figure}
 \subsubsection{Schwingungsenergie}
 Die exakte Energie zur Zeit $t$ muss mittels der Bewegung gerechnet werden.
 \[ \boxed{E(t) 
@@ -95,11 +129,30 @@ oft mehr Aussagekraft hat, kann diese der exakten Berechnung vorgezogen
 werden.
 
 Die Abnahme der Schwingungsenergie ist doppelt so schnell wie die Abnahme 
-der Schwingung. Somit kann diese analog zur Amplitude der gedämpften 
-Schwingung formuliert werden als
+der Schwingung (siehe Abbildung \ref{fig:abklingen}). Somit kann diese 
+analog zur Amplitude der gedämpften Schwingung formuliert werden als
 \[ \boxed{ \langle E(t) \rangle 
 	= E_0 \cdot e^{-2 \beta t} = E_0 \cdot e^{-\frac{2 t}{\tau}}
 }\]
+Wichtig ist hierbei noch zu bemerken, dass die Energie $E(t)$ eine
+doppelt so hohe Frequenz hat wie die Bewegung $A(t)$. Dies ist so, da
+die Energie pro Periode je zwei mal schwappt zwichen den Energiespeichern.
+
+\begin{comment}
+\begin{figure}[h!]
+	\centering
+	\begin{tikzpicture}[domain=0:6.28]
+		\draw[->] (0,0) -- (7,0) node[below] {$t$};
+		\draw[->] (0,0) -- (0,3) node[left] {$A,\,E$};
+
+		\draw[color=red, samples=200] plot[id=f] function{sin(2*x)};
+		\draw[color=blue, samples=200] plot[id=p] function{(1*sin(2*x))*(1*sin(2*x+pi/2))+0.5};
+
+		\draw[color=red] (1,3) node[right] {$A(t)$};
+		\draw[color=blue] (5,3) node[right] {$E(t)$};
+	\end{tikzpicture}
+\end{figure}
+\end{comment}
 
 \subsubsection{Güte}
 Die Güte ist ein Mass für die Dämpfung. Diese beschreibt wie viele 

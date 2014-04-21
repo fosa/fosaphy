@@ -98,3 +98,64 @@ Verhältnis von Feder und Masse.
 	\omega = \sqrt{\frac{k}{m}}
 }\]
 
+\subsection{Auslenkung und Geschwindigkeit als Anfangsbedingungen}
+Wird die Feder vor dem loslassen um die Strecke $x_0$ gedehnt, gibt 
+dies die Amplitude $A$ vor. 
+\[ \boxed{A = \sqrt{{x_0}^2 + \left(\frac{v_0}{\omega}\right)^2}} \]
+\[ \boxed{x_0 = x(0) = A \cdot \cos(\varphi)} \]
+Wird die Masse nicht einfach losgelassen
+sondern mit einer Geschwindigkeit $\vec{v}_0$ bewegt, dann gibt dies
+die Phasenverschiebung $\varphi$ vor.
+\[ \boxed{v_0 = \dot{x}(0) = - \omega \cdot A \cdot \sin(\varphi)} \]
+\[ \boxed{\phi = \tan^{-1}\left(-\frac{v_0}{\omega \cdot x_0}\right)} \]
+\textbf{Achtung!} Lösung kann im falschen Quadranten liegen. 
+Evtl. mit $\pi$ addieren. 
+
+
+\subsection{Geschwindigkeit und Beschleunigung aus Amplitude und Position}
+\[ \boxed{v(t) = \sqrt{\frac{k}{m}} \cdot \sqrt{A^2 - x^2(t)}
+	= \omega \sqrt{A^2 - x^2(t)}} \]
+\[ \boxed{a(t) = - \frac{k}{m} \cdot x(t) = - \omega^2 x(t)} \]
+
+\subsection{Maximale Geschwindigkeit und Beschleunigung}
+\[ \boxed{v_{max} = \omega \cdot A} \]
+\[ \boxed{v_{min} = -\omega \cdot A} \]
+\[ \boxed{a_{max} = -\omega^2 \cdot A} \]
+
+\subsection{Vertikales Federpendel}
+Das vertikale Federpendel beschreibt das selbe harmonische System wie in
+Abbildung \ref{fig:einfache-harmonische}. Der Unterschied liegt allein 
+darin, dass die Gleichgewichtslage verschoben ist, da die Erdbeschleunigung 
+wirkt und die Feder gedehnt wird.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.75]{../fig/federpendel-vertikal.pdf}
+	\caption{Vertikales Federpendel}
+	\label{fig:federpendel-vertikal}
+\end{figure}
+
+Der Einfluss der Erdbeschleunigung zeigt sich als \textit{Offset} in
+der Bewegungsgleichung
+\[ \boxed{x(t) = \underbrace{-\frac{m \cdot g}{k}}_{\text{Offset}} 
+	+ A \cdot \cos(\omega \cdot t + \phi)} \]
+Die Dynamik des Systems ist jedoch nicht beeinflusst von diesem 
+Offset, da die Bewegung die selbe bleibt.
+\[ \boxed{\omega = \sqrt{\frac{k}{m}}} \]
+
+\subsection{Energie}
+Die Energie eines einfach harmonischen Schwingungssystems verlagert
+sich ständig zwischen den beiden Energiespeichern. In den Extremlagen,
+also dort wo die Geschwindigkeit maximal und minimal ist, ist die
+gesamte Energie jeweils in der Feder bzw. in der Bewegung (kinetische
+Energie).
+\[ \boxed{E_{pot}(t) = \frac{1}{2} \cdot k \cdot x(t)^2} \]
+\[ \boxed{E_{kin}(t) = \frac{1}{2} \cdot m \cdot v(t)^2} \]
+Möchte man die Gesamtenergie des Systems so kann man dies für eine
+der Extremlagen mittels einer der obigen Formeln berechnen. Für eine
+beliebige Lage muss hierfür eine Kombination aus beiden Energien
+berechnet werden.
+\[ \boxed{E_{tot} = \frac{1}{2} \cdot k \cdot A^2 
+= \frac{1}{2} \cdot m \cdot \omega^2 \cdot A^2 
+= \frac{1}{2} \cdot m \cdot (v_{max})^2} \]
+

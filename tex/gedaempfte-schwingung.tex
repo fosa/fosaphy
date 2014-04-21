@@ -1,0 +1,123 @@
+\section{Gedämpfte Schwingung}
+Nimmt die Amplitude einer Schwingung im Verlaufe der Zeit ab, so nennt 
+man diese gedämpft. Um ein einfach harmonisches Schwingungssystem mit 
+einer Dämpfung zu erweitern, bedarf es lediglich der Erweiterung der
+ursprünglichen Differentialgleichung.
+\[ \boxed{\vec{F} 
+	= m \cdot \ddot{x} + \underbrace{
+		b \cdot \dot{x}}_{\text{Dämpfung}} 
+	+ k \cdot x = 0
+} \]
+
+
+\[ \boxed{F_{\text{Dämpfung}} = F_{\text{Stokes}} 
+= 6 \pi \cdot \eta \cdot R \cdot v} \]
+\[ \boxed{\rightarrow b = 6 \pi \cdot \eta \cdot R} \]
+\[ \boxed{\omega = \sqrt{\frac{k}{m}}} \]
+\[ \boxed{\beta = \frac{b}{2 m}} \]
+
+Die Abklingkonstante $\beta$ kann je nach Wert zu drei Fällen der
+Schwingung führen.
+\begin{itemize}
+	\item $\beta > \omega$ \hfill{} Kriechfall
+	\item $\beta = \omega$ \hfill{} kritische Dämpfung
+	\item $\beta < \omega$ \hfill{} gedämpfte Schwingung
+\end{itemize}
+
+\subsection{Kriechfall}
+Im Kriechfall ist die Abklingkonstante $\beta$ grösser als die 
+Kreisfrequenz $\omega$. Dies bedeutet, dass gar keine Schwingung
+mehr zu Stande kommt und die Bewegung in eine abklingende 
+$e$-Funktion entartet.
+\[ \boxed{x(t) \sim e^{(-\beta \pm \delta)t}} \]
+
+\subsection{Kritische Dämpfung}
+Der Punkt der kritischen Dämpfung (aperiodischer Grenzfall) beschreibt
+die Grneze an der gerade noch keine Schwingung möglich ist. Die 
+Abklingkonstante $\beta$ ist in diesem Fall gleich der Kreisfrequenz
+$\omega$. 
+\[ \boxed{b = b_{krit} = \sqrt{4 \cdot k \cdot m}} \]
+
+\subsection{Gedämpfte Schwingung}
+Im Falle der gedämpften Schwingung ist die Abklingkonstante $\beta$
+kleiner als die Kreisfrequenz $\omega$. Somit schwingt das System
+aber die Amplitude nimmt mit der Zeit $t$ ab\footnote{Es gibt je nach
+physikalischem System verschiedene Arten der Dämpfung. Im Modul
+MA+PHY2 wird stets mit der Dämpfung gerechnet welche die Amplitude
+in einer $e$-Funktion abklingen lässt.}.
+\[ \boxed{x(t) 
+	= A \cdot e^{-\beta t} \cdot \cos(\omega_d \cdot t)
+} \]
+Die Dämpfung verändert die Kreisfrequenz $\omega_0$ des ungedämpften 
+Systems zu $\omega_d$. Die Kreisfrequenz des gedämpften Systems ist
+dabei immer kleiner als die des ungedämpften, also $\omega_d < \omega_0$.
+\[ \boxed{\omega_d 
+	= \sqrt{{\omega_0}^2 - \beta^2} 
+	= \sqrt{\frac{k}{m} - \left({\frac{b}{2 \cdot m}}\right)^2}
+} \]
+Für grosse Güten kann die gedämpfte Kreisfrequnez mit der ungedämpften
+approiximiert werden. Für kleine $Q$ (im Bereich $Q<10$) kann die
+ gedämpfte Kreisfrequenz iterativ ermittelt werden mit
+\[ \omega_d 
+	=  \sqrt{\omega_0^2 - \frac{\omega_d^2}{4Q^2}}
+\]
+Für Güten grösser als $5$ reicht meist schon eine Iteration aus.
+
+\subsubsection{Abklingkonstante}
+\[ \boxed{\beta 
+	= \frac{\ln\left(\frac{x(t_1)}{x(t_2)}\right)}{t_2 - t_1}
+} \]
+
+\subsubsection{Zerfallszeit}
+Die Zerfallszeit $\tau$ einer gedämften Schwingung wird durch die 
+Abklingkonstante $\beta$ bestimmt.
+\[ \boxed{\tau 
+	= \frac{1}{\beta}
+} \]
+Die Amplitude der Schwingung nimmt nach der $e$-Funktion ab. Diese kann
+sowohl mit der Zerfallsszeit $\tau$ als auch mit der Abklingkonstante 
+$\beta$ beschrieben werden.
+\[ \boxed{A(t) 
+	= A_0 \cdot e^{-\beta t} 
+	= A_0 \cdot e^{-\frac{t}{\tau}}
+} \]
+Für die Praxis ergibt sich ein einfacher Zusmmenhang aus der $e$-Funktion,
+denn diese definiert, dass pro verstrichenes $\tau$ die Amplitude um ca.
+63\% gesunken ist. D.h. für $A(t=\tau) \approx A_0 \cdot 0.37$
+
+\subsubsection{Schwingungsenergie}
+Die exakte Energie zur Zeit $t$ muss mittels der Bewegung gerechnet werden.
+\[ \boxed{E(t) 
+	= \frac{m}{2} \cdot \dot{x}^2(t) + \frac{k}{2} \cdot x^2(t)
+} \]
+Da diese Berechnung eher mühsam ist und der Verlauf der mittleren Energie 
+oft mehr Aussagekraft hat, kann diese der exakten Berechnung vorgezogen 
+werden.
+
+Die Abnahme der Schwingungsenergie ist doppelt so schnell wie die Abnahme 
+der Schwingung. Somit kann diese analog zur Amplitude der gedämpften 
+Schwingung formuliert werden als
+\[ \boxed{ \langle E(t) \rangle 
+	= E_0 \cdot e^{-2 \beta t} = E_0 \cdot e^{-\frac{2 t}{\tau}}
+}\]
+
+\subsubsection{Güte}
+Die Güte ist ein Mass für die Dämpfung. Diese beschreibt wie viele 
+Schwingungen pro $\tau \cdot \pi$ stattfinden bis die Amplitude um 
+63\% sinkt.
+\[ \begin{array}{l} 
+	\boxed{ Q	
+		= 2\pi \frac{E(t)}{|\Delta E(t)|}
+		= \pi \frac{1}{\beta T_d}
+		= \pi \frac{\tau}{T_d}
+		= \frac{\omega_d \tau}{2} 
+	} \\
+	\Delta E(t) \text{ ist der Energieverlust pro Periode } T_d
+\end{array} \]
+Je kleiner die Güte, desto mehr macht sich die Veränderung von $T_d$
+bzw. $\omega_d$ bemerkbar. Für grosse Güten können die Werte als
+gleich angenommen werden.
+\[ \boxed{ Q \text{ gross} 
+	\quad \Rightarrow \quad \omega_0 \approx  \omega_d
+	\quad \Rightarrow \quad  T_0 \approx T_d
+} \]
